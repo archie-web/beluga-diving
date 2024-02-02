@@ -6,10 +6,10 @@ import { Link } from './link'
 const styles = {
   base: [
     // Base
-    'relative isolate inline-flex items-center justify-center gap-x-2 border text-base/6 font-semibold',
+    'relative isolate inline-flex items-center justify-center gap-x-2 border text-base/6 rounded-full font-semibold',
 
     // Sizing
-    'px-[calc(1.25em-1px)] sm:py-[calc(0.825em-1px)]',
+    'px-[calc(1.625em-1px)] sm:py-[calc(0.825em-1px)]',
 
     // Focus
     'focus:outline-none data-[focus]:outline data-[focus]:outline-2 data-[focus]:outline-offset-2 data-[focus]:outline-blue-500',
@@ -22,13 +22,13 @@ const styles = {
   ],
   solid: [
     // Optical border, implemented as the button background to avoid corner artifacts
-    'border-transparent bg-[--btn-border]',
+    'border-transparent bg-[--btn-border] ',
 
     // Dark mode: border is rendered on `after` so background is set to button background
     'dark:bg-[--btn-bg]',
 
     // Button background, implemented as foreground layer to stack on top of pseudo-border layer
-    'before:absolute before:inset-0 before:-z-10 before:rounded-[calc(theme(borderRadius.none)-1px)] before:bg-[--btn-bg]',
+    'before:absolute before:inset-0 before:-z-10 before:rounded-full before:bg-[--btn-bg]',
 
     // Drop shadow, applied to the inset `before` layer so it blends with the border
     'before:shadow',

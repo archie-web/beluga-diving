@@ -3,7 +3,7 @@ import parse from 'html-react-parser';
 
 import { Container } from '@components/Container';
 import {VStack} from '@components/Stack';
-import uuid from 'react-uuid';
+// import uuid from 'react-uuid';
 
 type ArticleProps = {
    bodyAdvanced: string;
@@ -29,10 +29,10 @@ export const NewsBlock = ({ className = '', data }: Props) => {
                {data.heading && <h2 className="h2">{data.heading}</h2>}
 
                <div className="lg:grid-cols grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-                  {data.articles.map((article) => (
+                  {data.articles.map((article, index) => (
                      <VStack
                         className="justify-between space-y-20 px-6 py-7 lg:py-20"
-                        key={uuid()}
+                        key={index}
                      >
                         <p className="text-[26px] leading-[1.16]">
                            {parse(article.bodyAdvanced ?? '')}

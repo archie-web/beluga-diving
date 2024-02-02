@@ -24,7 +24,7 @@ export const DesktopNavigation = () => {
                href={item.uri}
                as={item.uri}
                className={twMerge(
-                  'mix-blend-differencre__ hover:text-primaryColour overflow-y-hidden transition-all duration-300 ease-out dark:text-white',
+                  'overflow-y-hidden transition-all duration-300 ease-out text-black',
                   currentPath === item.uri && 'text-primaryColour',
                )}
             >

@@ -1,3 +1,4 @@
+import Banner from '@/components/Blocks/Banner';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -5,5 +6,9 @@ export const metadata: Metadata = {
 };
 
 export default function Page() {
-   return 'homepage';
+   return (
+      <>
+         <Banner />
+      </>
+   );
 }

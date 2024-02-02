@@ -5,24 +5,23 @@ interface NavItemType {
 
 export const navItems: NavItemType[] = [
    {
-      label: 'Home',
-      uri: '/',
+      label: 'services',
+      uri: '/#services',
    },
+   {
+      label: 'gallery',
+      uri: '/#gallery',
+   },
+   {
+    label: 'about us',
+    uri: '/#about-us',
+ },
    {
       label: 'contact',
-      uri: '/contact',
+      uri: '/#contact',
    },
    {
-      label: 'wysiwyg',
-      uri: '/wysiwyg',
+      label: '404',
+      uri: '/404',
    },
-
-   {
-      label: '503',
-      uri: '/503',
-   },
-   {
-    label: '404',
-    uri: '/404',
- },
 ];

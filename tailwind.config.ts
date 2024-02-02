@@ -8,12 +8,8 @@ const fallbackFonts: string[] = [
 ];
 
 const colours = {
-   blackBeauty: '#212121',
-   heritageCream: '#FDF7F3',
-   magicLilac: '#C08FF5',
-   champagneYellow: '#FFE65C',
-   stakesGreen: '#58DB8B',
-   paleGray: '#E7E2DE',
+   brandColour: '#F25D2F',
+deepWaterBlue: '#0A2342'
 };
 
 const config: Config = {
@@ -37,20 +33,9 @@ const config: Config = {
          },
          colors: {
             current: 'currentColor',
-            navy: {
-               300: '#514D8A',
-               400: ' #25216D',
-               DEFAULT: '#25216D',
-            },
-            brandColour: colours.champagneYellow,
-            primaryColour: colours.magicLilac,
-            secondaryColour: colours.stakesGreen,
-            tertiaryColour: colours.champagneYellow,
-            grey: {
-               400: colours.paleGray,
-               DEFAULT: colours.paleGray,
-            },
-            black: colours.blackBeauty,
+            primaryColour: colours.brandColour,
+            secondaryColour: colours.deepWaterBlue,
+            tertiaryColour: '#FFDED8',
             ...colours,
          },
          transitionDelay: {

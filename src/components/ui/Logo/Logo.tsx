@@ -31,7 +31,7 @@ export const Logo = ({ className = '', reversed = false }: Props) => (
             fontSize="16"
             className="fill-secondaryColour"
          >
-            SITE LOGO
+            Debluga Diving
          </text>
       </svg>
    </Link>
