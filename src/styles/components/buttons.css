@@ -1,0 +1,19 @@
+/* Links and buttons */
+
+@layer components {
+   .button {
+      @apply bg-primaryColour inline-block appearance-none border-2 border-transparent px-[1.25em] py-[0.825em] transition-all duration-300 ease-out focus:outline-none;
+
+      &:not(:disabled):hover {
+         @apply bg-secondaryColour;
+      }
+
+      &:focus {
+         @apply outline-none;
+      }
+
+      &--tertiary {
+         @apply bg-stakesGreen;
+      }
+   }
+}

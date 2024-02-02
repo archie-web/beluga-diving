@@ -1,0 +1,106 @@
+/* WYSIWYG styles */
+.wysiwyg {
+   container-type: inline-size;
+   @apply w-full;
+   > *:not(:first-child) {
+      margin-top: var(--space-wysiwyg);
+   }
+   img {
+      @apply aspect-6/4 w-full object-cover;
+   }
+   figure {
+      @apply my-8 lg:my-12;
+   }
+   figcaption {
+      margin-top: calc(var(--baseline) / 3);
+   }
+   blockquote {
+      @apply px-[8cqw];
+      p {
+         @apply relative;
+         &:before,
+         &:after {
+            @apply size-8 absolute block bg-slate-50 bg-center bg-no-repeat text-center text-5xl;
+            /* background-image: url('https://via.placeholder.com/40x40'); */
+            /* background-size: var(--icon-size); */
+            /* content: ''; */
+            /* @screen lg {
+               background-size: var(--icon-size) * 1.66;
+            } */
+         }
+         &:before {
+            @apply top-0;
+            /* left: calc(8cqw * -1); */
+            left: calc(var(--baseline) * -2);
+         }
+         &:after {
+            @apply bottom-0 rotate-180;
+            right: calc(var(--baseline) * -2);
+         }
+      }
+   }
+   ul,
+   ol {
+      @apply space-y-1.5;
+      li {
+         &::before {
+            @apply mr-2;
+         }
+         ul,
+         ol {
+            @apply my-2;
+         }
+      }
+   }
+   > ul {
+      > li {
+         @apply relative before:block;
+         padding-left: calc(var(--baseline));
+         &:before {
+            @apply absolute left-0 top-3 h-[1px] bg-current;
+            width: calc(var(--baseline) / 2);
+         }
+         ul {
+            margin-top: calc(var(--baseline) / 3);
+            padding-left: calc(var(--baseline) / 6);
+            list-style: circle;
+            list-style-position: inside;
+         }
+      }
+   }
+   > ol {
+      counter-reset: parent-counter;
+
+      > li {
+         padding-left: calc(var(--baseline) / 2);
+         &:before {
+            /* Increment by 1 */
+            counter-increment: parent-counter;
+            content: counter(parent-counter) '.';
+         }
+         ol {
+            counter-reset: child-counter;
+            padding-left: calc(var(--baseline));
+            > li {
+               &:before {
+                  /* Increment by 1 */
+                  counter-increment: child-counter;
+                  content: counter(parent-counter) '.' counter(child-counter);
+               }
+               > ol {
+                  counter-reset: grandchild-counter;
+                  > li {
+                     &:before {
+                        /* Increment by 1 */
+                        counter-increment: grandchild-counter;
+                        content: counter(parent-counter) '.'
+                           counter(child-counter) '.'
+                           counter(grandchild-counter);
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}

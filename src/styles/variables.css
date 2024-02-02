@@ -1,0 +1,50 @@
+/* Fluid Type Scale */
+:root {
+   --font-size-base: clamp(1rem, calc(0.97rem + 0.13vw), 1.13rem);
+   --font-size-sm: clamp(0.75rem, calc(0.72rem + 0.13vw), 0.88rem);
+   --font-size-h1: clamp(5.06rem, calc(4.91rem + 0.66vw), 5.75rem);
+   --font-size-h2: clamp(3.38rem, calc(3.27rem + 0.44vw), 3.8rem);
+   --font-size-h3: clamp(2.25rem, calc(2.18rem + 0.29vw), 2.53rem);
+   --font-size-h4: clamp(1.5rem, calc(1.45rem + 0.19vw), 1.69rem);
+
+   /* space */
+   --space-wysiwyg: clamp(1.75rem, calc(1.62rem + 0.55vw), 2.5rem);
+
+   --space-3xs-2xs: clamp(0.25rem, calc(-0.11rem + 1.55vw), 1.13rem);
+
+   /* 40px → 120px */
+   --space-m-l: clamp(1.5rem, calc(0.64rem + 4.29vw), 4.5rem);
+   --space-l-xl: clamp(2rem, calc(0.64rem + 6.79vw), 6.75rem);
+   --space-xl-2xl: clamp(3rem, calc(1.29rem + 8.57vw), 9rem);
+
+   /* Space 3xs: 3px → 5px */
+   --space-3xs: clamp(0.19rem, 0.16rem + 0.13vw, 0.31rem);
+
+   /* Space 2xs: 6px → 10px */
+   --space-2xs: clamp(0.38rem, 0.31rem + 0.26vw, 0.63rem);
+
+   /* Space xs: 9px → 15px */
+   --space-xs: clamp(0.56rem, 0.47rem + 0.39vw, 0.94rem);
+
+   /* Space s: 12px → 20px */
+   --space-sm: clamp(0.75rem, 0.63rem + 0.52vw, 1.25rem);
+
+   /* Space m: 18px → 30px */
+   --space-md: clamp(1.13rem, 0.94rem + 0.78vw, 1.88rem);
+
+   /* Space l: 24px → 40px */
+   --space-lg: clamp(1.5rem, 1.26rem + 1.04vw, 2.5rem);
+
+   /* Space xl: 36px → 60px */
+   --space-xl: clamp(2.25rem, 1.89rem + 1.55vw, 3.75rem);
+
+   /* Space 2xl: 48px → 80px */
+   --space-2xl: clamp(3rem, 2.51rem + 2.07vw, 5rem);
+
+   /* Space 3xl: 72px → 120px */
+   --space-3xl: clamp(4.5rem, 3.77rem + 3.11vw, 7.5rem);
+
+   --icon-size: 32px;
+
+   --baseline: 24px;
+}

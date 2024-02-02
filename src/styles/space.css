@@ -1,0 +1,110 @@
+@layer utilities {
+   .pt-space {
+      padding-top: var(--space-m-l);
+   }
+   .pb-space {
+      padding-bottom: var(--space-m-l);
+   }
+   .pl-space {
+      padding-left: var(--space-m-l);
+   }
+   .pr-space {
+      padding-right: var(--space-m-l);
+   }
+   .px-space {
+      @apply pr-space pl-space;
+   }
+   .py-space {
+      @apply pt-space pb-space;
+      &.bg-transparent {
+         + .bg-transparent {
+            @apply !pt-0;
+         }
+         + .pos-offset {
+            @apply !pt-0;
+         }
+      }
+   }
+   .p-space {
+      @apply px-space py-space;
+   }
+
+   .section-t-space {
+      padding-top: var(--space-l-xl);
+      &.bg-transparent {
+         + .bg-transparent {
+            @apply !pt-0;
+         }
+         + .pos-offset {
+            @apply !pt-0;
+         }
+      }
+   }
+   .section-b-space {
+      padding-bottom: var(--space-l-xl);
+   }
+   .section-y-space {
+      /* @apply py-16 lg:py-20; */
+      @apply section-t-space section-b-space;
+      &.bg-transparent {
+         + .bg-transparent {
+            @apply !pt-0;
+         }
+         + .pos-offset {
+            @apply !pt-0;
+         }
+      }
+   }
+   .mb-space {
+      margin-bottom: var(--space-m-l);
+   }
+   .mt-space {
+      margin-top: var(--space-m-l);
+   }
+
+   .ml-space {
+      margin-left: var(--space-m-l);
+   }
+   .mr-space {
+      margin-right: var(--space-m-l);
+   }
+}
+
+.mx-space {
+   @apply mr-space ml-space;
+}
+.my-space {
+   @apply mt-space mb-space;
+}
+
+.space-y-xs {
+   @apply space-y-2 lg:space-y-4;
+}
+.space-y-sm {
+   @apply space-y-3 lg:space-y-5;
+}
+.space-y-sm > :not([hidden]) ~ :not([hidden]) {
+   margin-top: var(--space-sm);
+}
+.space-y-md > :not([hidden]) ~ :not([hidden]) {
+   margin-top: var(--space-md);
+}
+.space-y-lg > :not([hidden]) ~ :not([hidden]) {
+   margin-top: var(--space-lg);
+}
+.space-y-xl > :not([hidden]) ~ :not([hidden]) {
+   margin-top: var(--space-xl);
+}
+
+.space-x-xs {
+   @apply space-x-1 lg:space-x-2;
+}
+.space-x-sm {
+   @apply space-x-2 lg:space-x-4;
+}
+.space-x-md {
+   @apply space-x-4 lg:space-x-6;
+}
+.space-x-lg {
+   @apply space-x-6 lg:space-x-8;
+}

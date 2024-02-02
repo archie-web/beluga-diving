@@ -1,0 +1,22 @@
+/* Videos using Lite YouTube Embed */
+
+lite-youtube {
+    @apply relative block aspect-video bg-cover bg-center cursor-pointer;
+}
+
+lite-youtube iframe {
+    @apply absolute inset-0 w-full h-full z-10;
+}
+
+.lty-playbtn {
+    background-image: url(/icon-play.svg);
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 block w-[80px] h-[80px] bg-red-600 bg-[length:24px_28px] bg-center bg-no-repeat rounded-full;
+}
+
+lite-youtube:hover .lty-playbtn {
+    @apply bg-black;
+}
+
+.lyt-visually-hidden {
+    @apply sr-only;
+}

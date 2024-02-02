@@ -1,0 +1,34 @@
+/* depreciate */
+
+.hamburger {
+   .line-1 {
+      @apply -translate-x-1/2;
+   }
+   .line-2 {
+      @apply translate-x-1/3;
+   }
+   /* last line */
+   .line-4 {
+      @apply absolute top-[10px] opacity-0;
+   }
+
+   &.is-active {
+      .line-1 {
+         @apply opacity-0;
+         transform: scaleY(0) translateY(20px);
+      }
+
+      .line-2 {
+         @apply translate-x-0 rotate-45;
+      }
+
+      .line-3 {
+         @apply opacity-0;
+         transform: scaleY(0) translateY(-20px);
+      }
+
+      .line-4 {
+         @apply translate-x-0 -rotate-45 bg-primaryColour opacity-100;
+      }
+   }
+}

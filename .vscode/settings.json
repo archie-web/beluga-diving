@@ -1,0 +1,6 @@
+{
+    "eslint.workingDirectories": ["./apps/frontend", "./apps/backend"],
+    "files.associations": {
+        "*.css": "tailwindcss"
+    }
+}

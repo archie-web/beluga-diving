@@ -1,0 +1,23 @@
+.main-slider {
+   @apply overflow-visible;
+
+   .swiper-slide:not(.swiper-slide-visible) {
+      opacity: 0.38;
+   }
+   .swiper-slide-visible {
+      /* border: 1px solid blue; */
+   }
+   .swiper-slide.swiper-slide-prev {
+      /* border: 2px solid red; */
+      opacity: 0.1;
+   }
+   .swiper-slide-prev ~ .swiper-slide:not(.swiper-slide-visible) {
+      /* border: 2px solid green; */
+      opacity: 0.38;
+   }
+}
+
+.swiper .swiper-slide {
+   /* remove the default height property from swiper-slide */
+   @apply h-auto;
+}
