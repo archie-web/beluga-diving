@@ -12,6 +12,7 @@ const nextConfig = {
          'youtube.com',
          'via.placeholder.com',
          'craftypixels.com',
+         'source.unsplash.com'
       ],
    },
 };

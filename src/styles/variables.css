@@ -1,7 +1,9 @@
 /* Fluid Type Scale */
 :root {
    --font-size-base: clamp(1rem, calc(0.97rem + 0.13vw), 1.13rem);
+
    --font-size-sm: clamp(0.75rem, calc(0.72rem + 0.13vw), 0.88rem);
+
    /* 36px → 44px */
    --font-size-h1: clamp(2.25rem, 2.0918rem + 0.6751vi, 2.75rem);
 
@@ -20,7 +22,9 @@
 
    /* 40px → 120px */
    --space-m-l: clamp(1.5rem, calc(0.64rem + 4.29vw), 4.5rem);
+
    --space-l-xl: clamp(2rem, calc(0.64rem + 6.79vw), 6.75rem);
+
    --space-xl-2xl: clamp(3rem, calc(1.29rem + 8.57vw), 9rem);
 
    /* Space 3xs: 3px → 5px */

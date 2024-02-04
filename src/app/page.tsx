@@ -1,13 +1,13 @@
 import Banner from '@/components/Blocks/Banner';
-import TextAndMedia from '@/components/Blocks/TextAndMedia';
-import ServiceList from '@/components/Blocks/ServiceList';
-import TwoColumns from '@/components/Blocks/TwoColumns';
 import Gallery from '@/components/Blocks/Gallery';
-// import { whyUs } from '@/data/whyUs';
+import ServiceList from '@/components/Blocks/ServiceList';
+import TextAndMedia from '@/components/Blocks/TextAndMedia';
+import TwoColumns from '@/components/Blocks/TwoColumns';
+import SITE_CONFIG from '@/constants/siteConfig';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-   title: 'Page Title',
+   title: SITE_CONFIG.SITE_NAME,
 };
 
 export default function Page() {
@@ -16,8 +16,10 @@ export default function Page() {
          <Banner />
          <TextAndMedia />
          <ServiceList />
-         <TwoColumns />
-         <Gallery />
+         <section className="space-y-xl py-space">
+            <TwoColumns />
+            <Gallery />
+         </section>
       </>
    );
 }

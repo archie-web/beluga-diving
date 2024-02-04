@@ -18,13 +18,13 @@ export function Footer({ children, className }: FooterProps) {
    return (
       <footer
          className={twMerge(
-            'bg-secondaryColour pt-space rounded-tl-[80px]',
+            'bg-secondaryColour pt-space lg:rounded-tl-[80px]',
             className,
          )}
       >
          <Container className="text-white">
-            <div className="grid lg:grid-cols-4 sm:grid-cols-2 gap-4">
-               <Logo reversed />
+            <div className="grid gap-12 lg:gap-4 sm:grid-cols-2 lg:grid-cols-4">
+               <Logo reversed className="hidden lg:block" />
                <div className="space-y-lg">
                   <h4>Navigation</h4>
                   <ul>
@@ -54,7 +54,7 @@ export function Footer({ children, className }: FooterProps) {
             </div>
 
             {children}
-            <div className="pt-space pb-6">
+            <div className="pt-space justify-between pb-6 lg:flex">
                <div>
                   &copy;{new Date().getFullYear()}&nbsp;
                   <Link href="/" passHref>
@@ -78,7 +78,7 @@ function FooterListItem({ item, ...props }: any) {
       <li className="flex items-center gap-4">
          <i className="block h-px w-6 bg-white/40" />
          <NextLink
-            className="block py-2 text-lg font-semibold"
+            className="block py-1 lg:py-2 lg:text-lg font-semibold"
             href={item.uri}
             {...props}
          >

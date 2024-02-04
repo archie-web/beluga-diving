@@ -4,14 +4,15 @@ import SITE_CONFIG from '@/constants/siteConfig';
 
 interface Props {
    reversed?: boolean;
+   className?: string;
 }
 
-export const Logo = ({ reversed = false, ...rest }: Props) => (
+export const Logo = ({ reversed = false, className = '' }: Props) => (
    <Link
       href="/"
       title={SITE_CONFIG.SITE_NAME}
       aria-label={SITE_CONFIG.SITE_NAME}
-      {...rest}
+      className={twMerge('block', className)}
    >
       <span className="sr-only invisible">{SITE_CONFIG.SITE_NAME}</span>
       <svg

@@ -1,88 +1,78 @@
 import { Container } from '@/components/Container';
-import { Text } from '@/components/ui/text';
-import { about } from '@/data/about';
-import parse from 'html-react-parser';
-import Image from 'next/image';
+import NextImage from '@/components/NextImage';
+import SITE_CONFIG from '@/constants/siteConfig';
 import { twJoin } from 'tailwind-merge';
 
-interface Props {
-   data: {
-      tagline: string;
-      bodyAdvanced: string;
-      linkField?: {
-         text: string;
-         url: string;
-      };
-   };
-}
-
+const imageStyle = 'size-full object-cover rounded-xl';
 const gridSpacing = 'gap-2 lg:gap-6';
 
-export const Gallery = ({}) => {
+export const Gallery = ({ reversed = false }) => {
    return (
-      <section className="pb-space" id="gallery">
+      <section id="gallery">
          <Container
-            className={twJoin('grid gap-6 lg:grid-cols-2', gridSpacing)}
+            className={twJoin('flex flex-col lg:flex-row', gridSpacing, reversed && "lg:flex-row-reverse")}
          >
-            <div className={twJoin('flex flex-col', gridSpacing)}>
-               <div className={twJoin('grid h-2/3 grid-cols-2', gridSpacing)}>
-                  <div className={twJoin('flex flex-col', gridSpacing)}>
-                     <Image
-                        src="https://via.placeholder.com/400"
-                        width={400}
-                        height={400}
-                        alt="snorkel"
-                        className="object-cover"
-                     />
-                     <Image
-                        src="https://via.placeholder.com/400"
-                        width={400}
-                        height={400}
-                        alt="snorkel"
-                        className="object-cover"
-                     />
-                  </div>
-                  <Image
-                     src="https://via.placeholder.com/400"
+            {/* <div className={twJoin('flex flex-col', gridSpacing)}> */}
+            <div className={twJoin('grid flex-1 grid-cols-2', gridSpacing)}>
+               <div className={twJoin('grid', gridSpacing)}>
+                  <NextImage
+                     src="https://source.unsplash.com/7i5HMCGupVw"
                      width={400}
                      height={400}
-                     alt="snorkel"
-                     className="h-full w-full object-cover"
+                     alt={SITE_CONFIG.SITE_NAME}
+                     className={twJoin(imageStyle, "aspect-square")}
+                  />
+                  <NextImage
+                     src="https://source.unsplash.com/mUIph40dQyA"
+                     width={400}
+                     height={400}
+                     alt={SITE_CONFIG.SITE_NAME}
+                     className={twJoin(imageStyle)}
                   />
                </div>
-               <Image
-                  src="https://via.placeholder.com/400x200"
-                  width={400}
-                  height={200}
-                  alt="snorkel"
-                  className="block h-1/3 w-full object-cover"
+               <NextImage
+                  src="https://source.unsplash.com/dtCTfjTEOgg"
+                  width={300}
+                  height={680}
+                  alt={SITE_CONFIG.SITE_NAME}
+                  className={twJoin(imageStyle)}
                />
             </div>
+            {/* <NextImage
+                  src="https://source.unsplash.com/yHaburAEFo4"
+                  width={636}
+                  height={424}
+                  alt={SITE_CONFIG.SITE_NAME}
+                  className={twJoin(imageStyle)}
+               /> */}
+            {/* </div> */}
 
-            <div className={twJoin('flex flex-col', gridSpacing)}>
-               <div className={twJoin('grid h-1/3 grid-cols-2', gridSpacing)}>
-                  <Image
-                     src="https://via.placeholder.com/400"
+            <div className={twJoin('flex flex-1 flex-col', gridSpacing)}>
+               <NextImage
+                  src="https://source.unsplash.com/8j4KMOCMOfw"
+                  width={600}
+                  height={500}
+                  alt={SITE_CONFIG.SITE_NAME}
+                  className={twJoin(imageStyle, 'h-auto')}
+               />
+               <div
+                  className={twJoin('grid flex-none grid-cols-2', gridSpacing)}
+               >
+                  <NextImage
+                     src="https://source.unsplash.com/9E9NsEiUGxg"
                      width={400}
                      height={400}
-                     alt="snorkel"
-                     className="size-full object-cover"
+                     alt={SITE_CONFIG.SITE_NAME}
+                     className={twJoin(imageStyle, 'aspect-square')}
                   />
-                  <Image
-                     src="https://via.placeholder.com/400"
+                  <NextImage
+                     src="https://source.unsplash.com/yHaburAEFo4"
                      width={400}
                      height={400}
-                     alt="snorkel"
-                     className="size-full object-cover"
+                     alt={SITE_CONFIG.SITE_NAME}
+                     className={twJoin(imageStyle, 'aspect-square')}
                   />
                </div>
-               <Image
-                  src="https://via.placeholder.com/600"
-                  width={600}
-                  height={600}
-                  alt="snorkel"
-                  className="block h-2/3 w-full object-cover"
-               />
             </div>
          </Container>
       </section>

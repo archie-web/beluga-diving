@@ -6,7 +6,7 @@ import { Logo } from '@/components/ui/Logo';
 
 const Banner = () => {
    return (
-      <section className="banner ralative">
+      <section className="banner pb-space ralative">
          <div className="absolute right-0 top-0 z-[-1] lg:w-1/2">
             <Image
                src="/images/banner-img.png"
