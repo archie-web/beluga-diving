@@ -1,27 +1,19 @@
-interface NavItemType {
+export interface NavItemType {
    label: string;
    uri: string;
 }
 
 export const navItems: NavItemType[] = [
    {
-      label: 'services',
+      label: 'Services',
       uri: '/#services',
    },
    {
-      label: 'gallery',
+      label: 'About Us',
+      uri: '/#about-us',
+   },
+   {
+      label: 'Gallery',
       uri: '/#gallery',
-   },
-   {
-    label: 'about us',
-    uri: '/#about-us',
- },
-   {
-      label: 'contact',
-      uri: '/#contact',
-   },
-   {
-      label: '404',
-      uri: '/404',
    },
 ];

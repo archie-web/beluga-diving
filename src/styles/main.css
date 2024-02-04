@@ -1,20 +1,17 @@
 /* Plugins */
-@import '../../node_modules/swiper/swiper-bundle.min.css';
+/* @import '../../node_modules/swiper/swiper-bundle.min.css'; */
 
 /* Base */
 @import 'tailwindcss/base';
 @import 'variables.css';
 @import 'typography';
-@import 'wysiwyg';
+/* @import 'wysiwyg'; */
 /* @import 'fonts'; */
 /* @import "forms"; */
 
 @import 'tailwindcss/components';
-@import 'components/accordions';
-@import 'components/buttons';
-@import 'components/carousel';
-@import './blinking.css';
-
+/* @import 'components/accordions';
+@import 'components/buttons'; */
 
 @import 'tailwindcss/utilities';
 @import 'space';
@@ -27,8 +24,18 @@ body {
    text-size-adjust: 100%;
    /* Enable kerning and optional ligatures */
    text-rendering: optimizeLegibility;
+   @apply text-sky-950;
 }
 
 a:not(.button, :has(*)) {
-   @apply hover:text-primaryColour underline underline-offset-2 outline-none transition-all duration-300 ease-out;
+   @apply hover:text-primaryColour outline-none transition-all duration-300 ease-out;
+}
+
+.banner {
+   /* set padding top max size is 33%, minimum 56px */
+    padding-top: max(22.5dvh, min(144px));
+}
+footer{
+    background-image: url('/images/bg-footer.jpg');
+    @apply bg-no-repeat bg-cover bg-top;
 }

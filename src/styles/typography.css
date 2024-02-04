@@ -1,7 +1,7 @@
 /* Typography */
 @layer base {
    .heading {
-      @apply font-bold uppercase leading-none tracking-[-0.02em];
+      @apply font-extrabold leading-none tracking-[-0.02em];
    }
    .h1,
    h1 {
@@ -17,11 +17,13 @@
 
    .h3,
    h3 {
+      @apply heading;
       font-size: var(--font-size-h3);
    }
 
    .h4,
    h4 {
+      @apply heading;
       font-size: var(--font-size-h4);
    }
    .h5,

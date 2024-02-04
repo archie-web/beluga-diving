@@ -41,7 +41,7 @@ const Hamburger = forwardRef<HTMLButtonElement, HamburgerProps>(
 
       return (
          <button
-            className="hamburger group flex shrink-0 appearance-none items-center justify-center outline-none"
+            className="hamburger size-20 group flex shrink-0 appearance-none items-center justify-center rounded-full bg-white outline-none"
             aria-label="toggle navigation"
             aria-expanded={isOpen}
             aria-controls={targetId}

@@ -4,6 +4,10 @@ import Link from 'next/link';
 import { ReactNode } from 'react';
 import { twMerge } from 'tailwind-merge';
 import { Container } from '../Container';
+import { navItems } from '../Navigation/navItems';
+import { TextLink } from '@components/ui/text';
+import { footerLinks, externalLinks } from '@/data/footerLinks';
+import { Logo } from '@/components/ui/Logo';
 
 type FooterProps = {
    className?: string;
@@ -12,22 +16,74 @@ type FooterProps = {
 
 export function Footer({ children, className }: FooterProps) {
    return (
-      <footer className={twMerge('bg-white py-4', className)}>
-         <Container className="flex divide-x divide-slate-400 leading-none text-white mix-blend-difference [&>*]:px-[0.75em]">
-            {children}
-            <div>
-               &copy;{new Date().getFullYear()}&nbsp;
-               <Link href="/" passHref>
-                  {SITE_CONFIG.SITE_NAME}
-               </Link>
+      <footer
+         className={twMerge(
+            'bg-secondaryColour pt-space rounded-tl-[80px]',
+            className,
+         )}
+      >
+         <Container className="text-white">
+            <div className="grid lg:grid-cols-4 sm:grid-cols-2 gap-4">
+               <Logo reversed />
+               <div className="space-y-lg">
+                  <h4>Navigation</h4>
+                  <ul>
+                     {navItems.map((item, index) => (
+                        <FooterListItem item={item} key={index} />
+                     ))}
+                  </ul>
+               </div>
+
+               <div className="space-y-lg">
+                  <h4>Other Links</h4>
+                  <ul>
+                     {externalLinks.map((item, index) => (
+                        <FooterListItem item={item} key={index} isExternal />
+                     ))}
+                  </ul>
+               </div>
+
+               <div className="space-y-lg">
+                  <h4>Contact Us</h4>
+                  <ul>
+                     {footerLinks.map((item, index) => (
+                        <FooterListItem item={item} key={index} />
+                     ))}
+                  </ul>
+               </div>
             </div>
-            <div>
-               Website by&nbsp;
-               <NextLink href={SITE_CONFIG.POWERED_BY.URL} isExternal>
-                  {SITE_CONFIG.POWERED_BY.NAME}
-               </NextLink>
+
+            {children}
+            <div className="pt-space pb-6">
+               <div>
+                  &copy;{new Date().getFullYear()}&nbsp;
+                  <Link href="/" passHref>
+                     {SITE_CONFIG.SITE_NAME}
+                  </Link>
+               </div>
+               <div>
+                  Website by&nbsp;
+                  <NextLink href={SITE_CONFIG.POWERED_BY.URL} isExternal>
+                     {SITE_CONFIG.POWERED_BY.NAME}
+                  </NextLink>
+               </div>
             </div>
          </Container>
       </footer>
+   );
+}
+
+function FooterListItem({ item, ...props }: any) {
+   return (
+      <li className="flex items-center gap-4">
+         <i className="block h-px w-6 bg-white/40" />
+         <NextLink
+            className="block py-2 text-lg font-semibold"
+            href={item.uri}
+            {...props}
+         >
+            {item.label}
+         </NextLink>
+      </li>
    );
 }

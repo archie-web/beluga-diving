@@ -1,9 +1,9 @@
 @layer utilities {
    .pt-space {
-      padding-top: var(--space-m-l);
+      padding-top: var(--space-xl-2xl);
    }
    .pb-space {
-      padding-bottom: var(--space-m-l);
+      padding-bottom: var(--space-xl-2xl);
    }
    .pl-space {
       padding-left: var(--space-m-l);

@@ -9,7 +9,7 @@ const styles = {
     'relative isolate inline-flex items-center justify-center gap-x-2 border text-base/6 rounded-full font-semibold',
 
     // Sizing
-    'px-[calc(1.625em-1px)] sm:py-[calc(0.825em-1px)]',
+    'px-[calc(1.625em-1px)] py-[calc(0.825em-1px)]',
 
     // Focus
     'focus:outline-none data-[focus]:outline data-[focus]:outline-2 data-[focus]:outline-offset-2 data-[focus]:outline-blue-500',

@@ -1,0 +1,43 @@
+import { Container } from '@/components/Container';
+import { Text } from '@/components/ui/text';
+import { about } from '@/data/about';
+import parse from 'html-react-parser';
+import Image from 'next/image';
+
+interface Props {
+   data: {
+      tagline: string;
+      bodyAdvanced: string;
+      linkField?: {
+         text: string;
+         url: string;
+      };
+   };
+}
+
+export const TwoColumns = ({}) => {
+   return (
+      <>
+         <section className="py-space">
+            <Container className="grid gap-x-12 gap-y-24 lg:grid-cols-2">
+               {about.map((item, index) => (
+                  <div className="space-y-8" key={index}>
+                     <div className="flex shrink-0 items-center gap-8">
+                        <Image
+                           src={item.imageUri}
+                           width={120}
+                           height={120}
+                           alt={item.title}
+                           className="object-contain h-24 w-auto"
+                        />
+                        <h2 className="h2">{item.title}</h2>
+                     </div>
+
+                     <Text className="opacity-70">{parse(item.content)}</Text>
+                  </div>
+               ))}
+            </Container>
+         </section>
+      </>
+   );
+};

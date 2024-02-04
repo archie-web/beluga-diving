@@ -9,7 +9,8 @@ const fallbackFonts: string[] = [
 
 const colours = {
    brandColour: '#F25D2F',
-deepWaterBlue: '#0A2342'
+   oceanBlue: '#A0D1FF',
+   deepWaterBlue: '#0A2342',
 };
 
 const config: Config = {
@@ -35,7 +36,7 @@ const config: Config = {
             current: 'currentColor',
             primaryColour: colours.brandColour,
             secondaryColour: colours.deepWaterBlue,
-            tertiaryColour: '#FFDED8',
+            tertiaryColour: colours.oceanBlue,
             ...colours,
          },
          transitionDelay: {

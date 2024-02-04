@@ -2,9 +2,15 @@
 :root {
    --font-size-base: clamp(1rem, calc(0.97rem + 0.13vw), 1.13rem);
    --font-size-sm: clamp(0.75rem, calc(0.72rem + 0.13vw), 0.88rem);
-   --font-size-h1: clamp(5.06rem, calc(4.91rem + 0.66vw), 5.75rem);
-   --font-size-h2: clamp(3.38rem, calc(3.27rem + 0.44vw), 3.8rem);
-   --font-size-h3: clamp(2.25rem, calc(2.18rem + 0.29vw), 2.53rem);
+   /* 36px → 44px */
+   --font-size-h1: clamp(2.25rem, 2.0918rem + 0.6751vi, 2.75rem);
+
+     /* 28px → 32px */
+  --font-size-h2: clamp(1.75rem, 1.6709rem + 0.3376vi, 2rem);
+
+    /* 24px → 26px */
+    --font-size-h3: clamp(1.5rem, 1.4604rem + 0.1688vi, 1.625rem);
+
    --font-size-h4: clamp(1.5rem, calc(1.45rem + 0.19vw), 1.69rem);
 
    /* space */

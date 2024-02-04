@@ -71,13 +71,12 @@ export const MobileNav = forwardRef<HTMLDivElement, MobileNavProps>(
             }}
             ref={ref}
             className={twMerge(
-               'fixed right-0 top-0 flex h-screen w-full flex-col justify-between overflow-y-auto overflow-x-hidden bg-white dark:bg-black md:w-1/2',
+               'fixed right-0 top-0 flex h-screen w-full flex-col justify-between overflow-y-auto overflow-x-hidden bg-white md:w-1/2 dark:bg-black',
                'p-space',
             )}
             style={{ zIndex: ZINDEX.NAVIGATION }}
          >
             <div className="space-y-sm" data-testid="nav-content">
-               <Logo />
                <ul
                   className="relative space-y-[0.5em]"
                   id="primary-menu"
@@ -88,20 +87,7 @@ export const MobileNav = forwardRef<HTMLDivElement, MobileNavProps>(
                         <NextLink href={item.uri}>{item.label}</NextLink>
                      </li>
                   ))}
-                  {/* <Accordion items={dummyAccordionItems} border={false} /> */}
                </ul>
-               {/* Level two submenu items */}
-               {data.map((item: any, index: number) => (
-                  <SubMenuItems key={item} label={`parent ${item}`}>
-                     {data.map((item: any) => (
-                        <SubMenuItems key={index} label="child ">
-                           <ul>
-                              <li>grandchild {item}</li>
-                           </ul>
-                        </SubMenuItems>
-                     ))}
-                  </SubMenuItems>
-               ))}
             </div>
 
             <ContactList

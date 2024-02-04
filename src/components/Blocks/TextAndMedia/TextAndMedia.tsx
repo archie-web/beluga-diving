@@ -1,9 +1,15 @@
-import NextImage from '@/components/NextImage';
+'use client';
+
+import { Container } from '@/components/Container';
 import NextLink, { LinkFieldProps } from '@/components/NextLink';
 import parse from 'html-react-parser';
 import { ElementOrSelector, animate, inView, stagger } from 'motion';
 import { useEffect, useRef } from 'react';
 import { twMerge } from 'tailwind-merge';
+import Image from 'next/image';
+import { Text } from '@/components/ui/text';
+import { CheckCircleIcon } from '@heroicons/react/24/solid';
+import { whyUs } from '@/data/whyUs';
 
 const enum MediaPosition {
    LEFT = 'left',
@@ -24,12 +30,9 @@ export type HeadingLevelType = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 interface TextAndImageProps {
    className?: string;
    reversePosition?: boolean;
-   data: {
-      media: MediaProps[];
-      headingLevel?: HeadingLevelType;
-      heading?: string;
-      bodyAdvanced?: string;
-      linkField?: LinkFieldProps;
+   data?: {
+      title: string;
+      content?: string;
    };
 }
 
@@ -38,84 +41,43 @@ export const TextAndMedia = ({
    reversePosition = false,
    data,
 }: TextAndImageProps) => {
-   const {
-      headingLevel: HeadingLevel = 'h2', // initializing the headingLevel property of an object with a default value of 'h2'.
-      bodyAdvanced,
-      heading,
-      linkField,
-   } = data;
    const fadeInRef = useRef<HTMLDivElement>(null);
-   useEffect(() => {
-      if (!fadeInRef.current) return;
-      inView(
-         fadeInRef.current,
-         ({ target }) => {
-            animate(
-               target.querySelectorAll('> *') as ElementOrSelector,
-               { opacity: 1, transform: 'none' },
-               {
-                  delay: stagger(0.1),
-                  duration: 1,
-                  easing: [0.22, 0.03, 0.26, 1],
-               },
-            );
-         },
-         { amount: 0.25 },
-      );
-   }, []);
-
-   const media = data.media[0]; // always use the first media item
-
    return (
-      <section className={twMerge('space-y-10', className)} ref={fadeInRef}>
-         {heading && <HeadingLevel className="h2">{heading}</HeadingLevel>}
-         <div
-            className={twMerge(
-               'flex gap-[5%]',
-               reversePosition && 'flex-row-reverse',
-            )}
-         >
-            {data.media && (
-               <div className={`overflow-hidden lg:w-1/2`}>
-                  <NextImage
-                     src={
-                        media.embeddedAsset
-                           ? media.embeddedAsset.url
-                           : media.url
-                     }
-                     alt={
-                        media.embeddedAsset
-                           ? media.embeddedAsset.title
-                           : media.title
-                     }
-                     quality={65} // default 75
-                     width={800}
-                     height={600}
-                     className="translate-x-1/3 object-cover opacity-0"
-                  />
-               </div>
-            )}
+      <section
+         className={twMerge('pt-space pb-10', className)}
+         ref={fadeInRef}
+         id="about-us"
+      >
+         <Container className="">
+            <div className={twMerge('grid gap-6 lg:grid-cols-2 lg:gap-16')}>
+               <Image
+                  src="/images/img-whale.png"
+                  alt="whale swimming"
+                  width={663}
+                  height={635}
+                  className="w-full -translate-x-10 object-contain"
+               />
 
-            <div
-               className={`flex flex-col justify-center space-y-4 lg:w-1/2 [&>*]:-translate-x-10 [&>*]:opacity-0`}
-            >
-               {heading && (
-                  <HeadingLevel className="h3">{heading}</HeadingLevel>
-               )}
-               {bodyAdvanced && parse(bodyAdvanced)}
-               {linkField && (
-                  <div>
-                     {linkField.url != null && (
-                        <NextLink href={linkField.url}>
-                           {linkField.customText
-                              ? linkField.customText
-                              : linkField.text}
-                        </NextLink>
-                     )}
-                  </div>
-               )}
+               <div className={`flex flex-col justify-center space-y-16`}>
+                  <h2 className="h1">Why choose us</h2>
+                  <ul className="space-y-6">
+                     {whyUs.map((item, index) => (
+                        <li className="space-y-2" key={index}>
+                           <div className="flex items-center gap-4">
+                              <CheckCircleIcon className="size-12 text-sky-300 " />
+                              <h3 className="h3 leading-none text-sky-900">
+                                 {item.title}
+                              </h3>
+                           </div>
+                           {item.content && (
+                              <Text className="pl-16">{item.content}</Text>
+                           )}
+                        </li>
+                     ))}
+                  </ul>
+               </div>
             </div>
-         </div>
+         </Container>
       </section>
    );
 };

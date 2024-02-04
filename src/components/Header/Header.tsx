@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import { HStack } from '@components/Stack';
 import Hamburger from '@/components/ui/Hamburger';
 import { Logo } from '@/components/ui/Logo';
@@ -86,7 +86,7 @@ export const Header = ({
          className={twMerge(
             'flex items-center justify-between px-4 py-6 lg:px-8',
             isSticky
-               ? 'fixed w-full bg-white/80 backdrop-blur-sm dark:bg-black/80'
+               ? 'bg-white/80__ __backdrop-blur-sm fixed w-full'
                : 'relative',
             className,
          )}
@@ -96,8 +96,12 @@ export const Header = ({
          {...rest}
       >
          <Logo />
+         {/* <div className="text-[44px] leading-none font-black tracking-tighter">
+            Beluga<br />
+            Diving
+         </div> */}
          <HStack spacing="lg">
-            <DesktopNavigation />
+            {/* <DesktopNavigation /> */}
             <MobileNav isActive={isActive} data={ARR} ref={menuRef} />
             <Hamburger
                onClick={handleHamburgerClick}
