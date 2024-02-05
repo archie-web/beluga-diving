@@ -11,6 +11,6 @@ export const whyUs = [
    },
    {
       title: 'Whale Swim',
-      content: 'Have an experience of a lifetime on a Whaleswim',
+      content: "Create an unforgettable memory by swimming with the world's largest mammal. Witness the awe-inspiring migration of humpback whales as they pass through Tonga from the last week of July to the end of October. Embark on a remarkable boat trip and immerse yourself in the unparalleled experience of swimming alongside these magnificent creatures."
    },
 ];

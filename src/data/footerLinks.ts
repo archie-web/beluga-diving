@@ -14,7 +14,7 @@ export const externalLinks: NavItemType[] = [
 
 export const footerLinks: NavItemType[] = [
    {
-      label: 'Email Us',
+      label: 'Email us',
       uri: `mailto:${SITE_CONFIG.EMAIL}`,
    },
 ];

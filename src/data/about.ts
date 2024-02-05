@@ -1,15 +1,15 @@
 export const about = [
    {
       title: 'Location',
-      imageUri: '/images/img-anchor.png',
+      imageUri: '/images/img-icon-anchor.png',
       content:
-         "Our Dive Operation is located at Fangafoa Marina in the capital of Vava'u, called Neiafu. Tonga has a lot to offer the world with its beautiful Coral Reefs that stretch over fifty different dive spots and there is still a lot more to discover. The visibility is between 25 meters (82 feet) to 40 meters (131 feet) and the Water Temperature is between 24C degrees (74F) to 28C (84F). view map",
+         "Our dive operation is situated at Fangafoa Marina in Neiafu, the capital of Vava'u. Tonga boasts a myriad of attractions for the global diving community, showcasing over fifty diverse dive spots within its stunning coral reefs, with many more yet to be explored. Experience crystal-clear waters with visibility ranging from 25 meters (82 feet) to 40 meters (131 feet), while enjoying water temperatures fluctuating between 24°C (74°F) and 28°C (84°F).",
    },
 
    {
       title: 'Our Boats',
       content:
-         'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, aliquid suscipit. Asperiores, voluptatibus.',
-      imageUri: '/images/img-anchor.png',
+         'Our dive operation is equipped with two distinct boats: MV GLADIATOR, a 34-ft catamaran aluminum boat featuring a cabin with Twin 150 h/p. This vessel comfortably accommodates up to 12 divers, cruising at a speed of 25 knots. Additionally, we have MAD MAX, our versatile runabout boat ideal for Open Water student excursions. With a capacity for 8 divers, MAD MAX travels at a steady 19 knots, ensuring a comfortable and efficient experience on the water.',
+      imageUri: '/images/img-icon-boat.png',
    },
 ];

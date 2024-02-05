@@ -5,7 +5,7 @@ import { ReactNode } from 'react';
 import { twMerge } from 'tailwind-merge';
 import { Container } from '../Container';
 import { navItems } from '../Navigation/navItems';
-import { TextLink } from '@components/ui/text';
+import { Text, TextLink } from '@components/ui/text';
 import { footerLinks, externalLinks } from '@/data/footerLinks';
 import { Logo } from '@/components/ui/Logo';
 
@@ -23,8 +23,17 @@ export function Footer({ children, className }: FooterProps) {
          )}
       >
          <Container className="text-white">
-            <div className="grid gap-12 lg:gap-4 sm:grid-cols-2 lg:grid-cols-4">
-               <Logo reversed className="hidden lg:block" />
+            <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4">
+               <div className="hidden space-y-4 lg:block">
+                  <Logo reversed />
+                  {/* <Text>
+                     Vavaʻu is an island group, consisting of one large island
+                     (ʻUtu Vavaʻu) and 40 smaller ones, in Tonga. It is part of
+                     Vavaʻu District, which includes several other individual
+                     islands.
+                  </Text> */}
+               </div>
+
                <div className="space-y-lg">
                   <h4>Navigation</h4>
                   <ul>
@@ -44,7 +53,7 @@ export function Footer({ children, className }: FooterProps) {
                </div>
 
                <div className="space-y-lg">
-                  <h4>Contact Us</h4>
+                  <h4>To enquire or book</h4>
                   <ul>
                      {footerLinks.map((item, index) => (
                         <FooterListItem item={item} key={index} />
@@ -78,7 +87,7 @@ function FooterListItem({ item, ...props }: any) {
       <li className="flex items-center gap-4">
          <i className="block h-px w-6 bg-white/40" />
          <NextLink
-            className="block py-1 lg:py-2 lg:text-lg font-semibold"
+            className="block py-1 font-semibold lg:py-2 lg:text-lg"
             href={item.uri}
             {...props}
          >

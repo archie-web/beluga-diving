@@ -18,7 +18,7 @@ interface Props {
 export const TwoColumns = ({}) => {
    return (
       <section>
-         <Container className="grid gap-x-12 gap-y-24 lg:grid-cols-2">
+         <Container className="grid gap-12 lg:grid-cols-2">
             {about.map((item, index) => (
                <div className="space-y-8" key={index}>
                   <div className="flex shrink-0 items-center gap-8">

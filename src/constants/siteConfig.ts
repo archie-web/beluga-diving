@@ -1,16 +1,18 @@
 import theme from '@/theme';
 
 const SITE_CONFIG = {
-   SITE_NAME: 'Beluga Diving Vavau',
-   LEGAL_NAME: 'Beluga Diving Vavau',
-   SITE_DESCRIPTION: '000000000000000.',
+   SITE_NAME: 'Beluga Diving',
+   LEGAL_NAME: "Beluga Diving Vava'u",
+   SITE_TAGLINE:
+      "Diving, Whale watching and swimming with whales in Vava'u Tonga",
+   SITE_DESCRIPTION:
+      "Explore Vava'u, Tonga's premier destination for diving, whale watching, and swimming with whales. Immerse yourself in unforgettable underwater experiences, encountering vibrant marine life and majestic whales. Book your adventure in Vava'u today",
    SITE_URL: 'https://belugadivingvavau.com',
    POWERED_BY: {
       NAME: 'ArchieWeb',
       URL: 'https://archieweb.nz',
    },
    PHONE_NUMBER: '0800 123 456',
-   SITE_TAGLINE: 'fast and reliable web design and development',
    MOBILE: '022 044 6761',
    EMAIL: 'archie@archie.kiwi',
    BRAND_COLOUR: theme && theme.colors ? theme.colors.primaryColour : '#222222',

@@ -27,7 +27,7 @@ export const ServiceList = ({ data }: ServiceListProps) => {
          </svg>
          <section id="services">
             <div className="pb-space bg-sky-50 pt-12">
-               <Container className="space-y-20">
+               <Container className="space-y-20" size="xl">
                   <div className="mx-auto flex max-w-3xl flex-col items-center gap-5 text-center">
                      <h3 className="h4 text-orange-600">Our services</h3>
                      <h2 className="h1">Beluga Diving Vavau also offers</h2>
@@ -41,10 +41,10 @@ export const ServiceList = ({ data }: ServiceListProps) => {
                      </Text>
                   </div>
 
-                  <ul className="grid gap-x-12 gap-y-24 lg:grid-cols-2">
+                  <ul className="grid gap-x-12 gap-y-24 md:grid-cols-2">
                      {offers.map((item, index) => (
-                        <li className="flex gap-6" key={index}>
-                           <div className="shrink-0 ">
+                        <li className="flex flex-col items-center lg:items-start lg:flex-row gap-6" key={index}>
+                           <div className="shrink-0">
                               <Image
                                  src={item.imageUri}
                                  width={120}
@@ -54,7 +54,7 @@ export const ServiceList = ({ data }: ServiceListProps) => {
                               />
                            </div>
 
-                           <div className="space-y-4">
+                           <div className="space-y-4 text-center lg:text-left">
                               <h4 className="h3">{item.title}</h4>
                               <Text className="opacity-70">{item.content}</Text>
                            </div>

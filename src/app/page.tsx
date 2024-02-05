@@ -7,7 +7,8 @@ import SITE_CONFIG from '@/constants/siteConfig';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-   title: SITE_CONFIG.SITE_NAME,
+   title: `${SITE_CONFIG.SITE_NAME} | ${SITE_CONFIG.SITE_TAGLINE}`,
+   description: SITE_CONFIG.SITE_DESCRIPTION,
 };
 
 export default function Page() {
@@ -16,7 +17,7 @@ export default function Page() {
          <Banner />
          <TextAndMedia />
          <ServiceList />
-         <section className="space-y-xl py-space">
+         <section className="py-space space-y-16 lg:space-y-24">
             <TwoColumns />
             <Gallery />
          </section>
