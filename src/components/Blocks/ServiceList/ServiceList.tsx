@@ -41,7 +41,7 @@ export const ServiceList = ({ data }: ServiceListProps) => {
                      </Text>
                   </div>
 
-                  <ul className="grid gap-x-12 gap-y-24 md:grid-cols-2">
+                  <ul className="grid gap-x-12 gap-10 lg:gap-y-24 md:grid-cols-2">
                      {offers.map((item, index) => (
                         <li className="flex flex-col items-center lg:items-start lg:flex-row gap-6" key={index}>
                            <div className="shrink-0">

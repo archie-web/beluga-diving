@@ -67,7 +67,7 @@ export function Footer({ children, className }: FooterProps) {
                <div>
                   &copy;{new Date().getFullYear()}&nbsp;
                   <Link href="/" passHref>
-                     {SITE_CONFIG.SITE_NAME}
+                     {SITE_CONFIG.LEGAL_NAME}
                   </Link>
                </div>
                <div>

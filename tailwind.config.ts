@@ -39,10 +39,6 @@ const config: Config = {
             tertiaryColour: colours.oceanBlue,
             ...colours,
          },
-         transitionDelay: {
-            1500: '1.5s',
-            2000: '2s',
-         },
          transitionTimingFunction: {
             'in-lazy': 'cubic-bezier(.57,-0.2,.01,1)',
             'in-expo': 'cubic-bezier(0.95, 0.05, 0.795, 0.035)',

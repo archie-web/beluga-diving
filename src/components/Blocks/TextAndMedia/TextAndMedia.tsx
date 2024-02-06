@@ -44,7 +44,7 @@ export const TextAndMedia = ({
    const fadeInRef = useRef<HTMLDivElement>(null);
    return (
       <section
-         className={twMerge('pt-space pb-10', className)}
+         className={twMerge('lg:pt-space pb-10', className)}
          ref={fadeInRef}
          id="about-us"
       >
@@ -55,7 +55,7 @@ export const TextAndMedia = ({
                   alt="whale swimming"
                   width={663}
                   height={635}
-                  className="w-full -translate-x-10 object-contain"
+                  className="w-full lg:-translate-x-10 object-contain"
                />
 
                <div className={`flex flex-col justify-center space-y-16`}>

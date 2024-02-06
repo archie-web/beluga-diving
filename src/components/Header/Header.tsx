@@ -27,6 +27,25 @@ export const Header = ({
    const menuRef = useRef<HTMLDivElement>(null);
    const hamburgerRef = useRef<HTMLButtonElement>(null);
 
+   // set window scroll state
+   const [isScroll, setScroll] = useState(false);
+
+   // add event listner when scroll down
+   useEffect(() => {
+      const handleScroll = () => {
+         if (headerRef.current) {
+            if (window.scrollY > 100) {
+               setScroll(true);
+            } else {
+               setScroll(false);
+            }
+         }
+      };
+
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+   }, []);
+
    // Use the useCallback hook to memoize the handleClick function,
    // which can improve performance by preventing unnecessary re-renders of child components.
 
@@ -84,7 +103,7 @@ export const Header = ({
    return (
       <header
          className={twMerge(
-            'flex items-center justify-between px-4 py-6 lg:px-8',
+            'flex items-center justify-between px-4 py-4 lg:px-8',
             isSticky
                ? 'bg-white/80__ __backdrop-blur-sm fixed w-full'
                : 'relative',
@@ -95,7 +114,12 @@ export const Header = ({
          data-testid={isSticky ? 'sticky-header' : 'header'}
          {...rest}
       >
-         <Logo />
+         <Logo
+            className={twMerge(
+               'transition-opacity ease-in-lazy duration-700',
+               isScroll ? 'opacity-0' : 'opacity-100',
+            )}
+         />
          {/* <div className="text-[44px] leading-none font-black tracking-tighter">
             Beluga<br />
             Diving

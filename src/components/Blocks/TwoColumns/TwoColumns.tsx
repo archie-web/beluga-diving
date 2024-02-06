@@ -20,7 +20,7 @@ export const TwoColumns = ({}) => {
       <section>
          <Container className="grid gap-12 lg:grid-cols-2">
             {about.map((item, index) => (
-               <div className="space-y-8" key={index}>
+               <div className="space-y-md" key={index}>
                   <div className="flex shrink-0 items-center gap-8">
                      <Image
                         src={item.imageUri}
