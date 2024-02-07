@@ -47,7 +47,7 @@ export default function Document() {
    return (
       <Html className="scroll-smooth antialiased" lang="en">
          <Head>
-            <script dangerouslySetInnerHTML={{ __html: modeScript }} />
+            {/* <script dangerouslySetInnerHTML={{ __html: modeScript }} /> */}
             <Script
                async
                src={`https://www.googletagmanager.com/gtag/js?id=${SITE_CONFIG.GOOGLE_ANALYTICS_ID}`}

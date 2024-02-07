@@ -1,7 +1,7 @@
 import FavIcon from '@/components/FavIcon';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
-import ModeToggleButton from '@/components/ModeToggleButton';
+// import ModeToggleButton from '@/components/ModeToggleButton';
 import '@/styles/main.css';
 import { Metadata } from 'next';
 import { Noto_Sans } from 'next/font/google';
