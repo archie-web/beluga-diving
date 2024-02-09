@@ -17,7 +17,7 @@ interface Props {
 
 export const TwoColumns = ({}) => {
    return (
-      <section>
+      <section className='py-space bg-transparent'>
          <Container className="grid gap-12 lg:grid-cols-2">
             {about.map((item, index) => (
                <div className="space-y-md" key={index}>

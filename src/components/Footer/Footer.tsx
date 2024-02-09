@@ -34,32 +34,13 @@ export function Footer({ children, className }: FooterProps) {
                   </Text> */}
                </div>
 
-               <div className="space-y-lg">
-                  <h4>Navigation</h4>
-                  <ul>
-                     {navItems.map((item, index) => (
-                        <FooterListItem item={item} key={index} />
-                     ))}
-                  </ul>
-               </div>
-
-               <div className="space-y-lg">
-                  <h4>Other Links</h4>
-                  <ul>
-                     {externalLinks.map((item, index) => (
-                        <FooterListItem item={item} key={index} isExternal />
-                     ))}
-                  </ul>
-               </div>
-
-               <div className="space-y-lg">
-                  <h4>To enquire or book</h4>
-                  <ul>
-                     {footerLinks.map((item, index) => (
-                        <FooterListItem item={item} key={index} />
-                     ))}
-                  </ul>
-               </div>
+               <FooterList heading="Navigation" items={navItems} />
+               <FooterList
+                  heading="Other Links"
+                  items={externalLinks}
+                  isExternal={true}
+               />
+               <FooterList heading="To enquire or book" items={footerLinks} />
             </div>
 
             {children}
@@ -96,3 +77,20 @@ function FooterListItem({ item, ...props }: any) {
       </li>
    );
 }
+
+const FooterList = ({ heading, items, isExternal = false }: any) => {
+   return (
+      <div className="space-y-lg">
+         <h5 className="uppercase">{heading}</h5>
+         <ul>
+            {items.map((item: any, index: number) => (
+               <FooterListItem
+                  item={item}
+                  key={index}
+                  isExternal={isExternal}
+               />
+            ))}
+         </ul>
+      </div>
+   );
+};

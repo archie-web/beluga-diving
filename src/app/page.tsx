@@ -17,10 +17,10 @@ export default function Page() {
          <Banner />
          <TextAndMedia />
          <ServiceList />
-         <section className="py-space space-y-16 lg:space-y-24">
-            <TwoColumns />
+         <TwoColumns />
+         {/* <section className="py-space space-y-16 lg:space-y-24"> */}
             <Gallery />
-         </section>
+         {/* </section> */}
       </>
    );
 }

@@ -48,7 +48,7 @@ export const TextAndMedia = ({
          ref={fadeInRef}
          id="about-us"
       >
-         <Container className="">
+         <Container size='2xl'>
             <div className={twMerge('grid gap-6 lg:grid-cols-2 lg:gap-16')}>
                <Image
                   src="/images/img-whale.png"

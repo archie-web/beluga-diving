@@ -10,8 +10,8 @@
 /* @import "forms"; */
 
 @import 'tailwindcss/components';
-/* @import 'components/accordions';
-@import 'components/buttons'; */
+@import 'components/buttons';
+/* @import 'components/accordions'; */
 
 @import 'tailwindcss/utilities';
 @import 'space';

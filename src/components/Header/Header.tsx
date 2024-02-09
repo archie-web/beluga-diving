@@ -103,7 +103,7 @@ export const Header = ({
    return (
       <header
          className={twMerge(
-            'flex items-center justify-between px-4 py-4 lg:px-8',
+            'flex items-center justify-end px-4 py-4 lg:px-8',
             isSticky
                ? 'bg-white/80__ __backdrop-blur-sm fixed w-full'
                : 'relative',
@@ -114,12 +114,12 @@ export const Header = ({
          data-testid={isSticky ? 'sticky-header' : 'header'}
          {...rest}
       >
-         <Logo
+         {/* <Logo
             className={twMerge(
                'transition-opacity ease-in-lazy duration-700',
                isScroll ? 'opacity-0' : 'opacity-100',
             )}
-         />
+         /> */}
          {/* <div className="text-[44px] leading-none font-black tracking-tighter">
             Beluga<br />
             Diving
@@ -134,12 +134,14 @@ export const Header = ({
                style={{ zIndex: ZINDEX.NAVIGATION + 1 }}
             />
          </HStack>
-         {isActive && (
-            <div
-               className="fixed inset-0 block w-full bg-black/10 backdrop-blur-sm content-['']"
-               style={{ zIndex: ZINDEX.NAVIGATION - 1 }}
-            />
-         )}
+
+         <div
+            className={twMerge(
+               "fixed inset-0 w-full transition-all content-['']",
+               isActive ? 'bg-black/40 backdrop-blur-sm visible' : 'invisible',
+            )}
+            style={{ zIndex: ZINDEX.NAVIGATION - 1 }}
+         />
       </header>
    );
 };

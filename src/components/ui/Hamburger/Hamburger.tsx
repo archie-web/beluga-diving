@@ -16,7 +16,7 @@ const Hamburger = forwardRef<HTMLButtonElement, HamburgerProps>(
          return Array.from({ length: linesCount }, (_, index) => (
             <motion.i
                className={twMerge(
-                  `ease-out-expo block h-0.5 w-full bg-black transition-all duration-500 group-hover:translate-x-0 dark:bg-white`,
+                  `ease-out-expo block h-0.5 w-full bg-deepWaterBlue transition-all duration-500 group-hover:translate-x-0 `,
                   index === linesCount - 1 && 'absolute top-[10px] opacity-0', // last line
                   isOpen &&
                      (index === 0

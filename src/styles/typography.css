@@ -1,7 +1,7 @@
 /* Typography */
 @layer base {
    .heading {
-      @apply font-extrabold leading-none tracking-[-0.02em];
+      @apply font-extrabold leading-none tracking-[-0.03em];
    }
    .h1,
    h1 {
@@ -23,12 +23,12 @@
 
    .h4,
    h4 {
-      @apply heading;
+      @apply heading tracking-tight;
       font-size: var(--font-size-h4);
    }
    .h5,
    h5 {
-      @apply heading text-lg leading-[1.2];
+      @apply heading text-xl;
    }
    p {
       font-size: var(--font-size-base);

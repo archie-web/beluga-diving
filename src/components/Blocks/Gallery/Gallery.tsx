@@ -38,7 +38,11 @@ const GalleryPhoto = ({ src, alt, className, ...rest }: Props) => {
 
 export const Gallery = ({ reversed = false }) => {
    return (
-      <section id="gallery">
+      <section
+         className="py-space space-y-10 bg-transparent lg:space-y-20"
+         id="gallery"
+      >
+         <h2 className="h1 text-center">Photo Gallery</h2>
          <Container
             className={twJoin(
                'flex flex-col lg:flex-row',

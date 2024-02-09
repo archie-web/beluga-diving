@@ -71,20 +71,24 @@ export const MobileNav = forwardRef<HTMLDivElement, MobileNavProps>(
             }}
             ref={ref}
             className={twMerge(
-               'fixed right-0 top-0 flex h-screen w-full flex-col justify-between overflow-y-auto overflow-x-hidden bg-white md:w-1/2 dark:bg-black',
-               'p-space',
+               'p-space fixed right-0 top-0 flex h-dvh w-full flex-col justify-center gap-20 overflow-y-auto overflow-x-hidden bg-white md:w-1/3',
             )}
             style={{ zIndex: ZINDEX.NAVIGATION }}
          >
             <div className="space-y-sm" data-testid="nav-content">
                <ul
-                  className="relative space-y-[0.5em]"
+                  className="relative space-y-[1.5em]"
                   id="primary-menu"
                   ref={animateItem}
                >
                   {navItems.map((item) => (
                      <li key={item.label}>
-                        <NextLink href={item.uri}>{item.label}</NextLink>
+                        <NextLink
+                           className="text-2xl font-extrabold uppercase"
+                           href={item.uri}
+                        >
+                           {item.label}
+                        </NextLink>
                      </li>
                   ))}
                </ul>

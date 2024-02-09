@@ -13,8 +13,8 @@ type Props = HTMLAttributes<HTMLDivElement> & {
 export const Container = ({
    children,
    flush = false,
-   size = '2xl',
-   className,
+   size = 'xl',
+   className = '',
    ...rest
 }: Props) => {
    function maxW(value: string) {
@@ -22,7 +22,7 @@ export const Container = ({
          case '2xl':
             return 'max-w-[1680px]';
          case 'xl':
-            return 'max-w-[1280px]';
+            return 'max-w-7xl';
          case 'lg':
             return 'max-w-5xl';
          case 'md':
