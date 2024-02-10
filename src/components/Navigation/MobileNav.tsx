@@ -71,33 +71,34 @@ export const MobileNav = forwardRef<HTMLDivElement, MobileNavProps>(
             }}
             ref={ref}
             className={twMerge(
-               'p-space fixed right-0 top-0 flex h-dvh w-full flex-col justify-center gap-20 overflow-y-auto overflow-x-hidden bg-white md:w-1/3',
+               'p-space fixed right-0 top-0 flex h-dvh w-full flex-col justify-center gap-20 overflow-y-auto overflow-x-hidden bg-slate-100  md:w-1/3',
             )}
             style={{ zIndex: ZINDEX.NAVIGATION }}
          >
             <div className="space-y-sm" data-testid="nav-content">
                <ul
-                  className="relative space-y-[1.5em]"
+                  className="relative space-y-[1.25em] text-2xl opacity-90 -translate-y-4"
                   id="primary-menu"
                   ref={animateItem}
                >
                   {navItems.map((item) => (
                      <li key={item.label}>
                         <NextLink
-                           className="text-2xl font-extrabold uppercase"
+                           className="font-extrabold uppercase"
                            href={item.uri}
                         >
                            {item.label}
                         </NextLink>
                      </li>
                   ))}
+                  <li>
+                    Email: <br/>
+                     <a href={`mailto:${SITE_CONFIG.EMAIL}`}>
+                        {SITE_CONFIG.EMAIL}
+                     </a>{' '}
+                  </li>
                </ul>
             </div>
-
-            <ContactList
-               phone={SITE_CONFIG.PHONE_NUMBER}
-               email="hello@archie.kiwi"
-            />
          </motion.nav>
       );
    },

@@ -16,7 +16,7 @@ const Hamburger = forwardRef<HTMLButtonElement, HamburgerProps>(
          return Array.from({ length: linesCount }, (_, index) => (
             <motion.i
                className={twMerge(
-                  `ease-out-expo block h-0.5 w-full bg-deepWaterBlue transition-all duration-500 group-hover:translate-x-0 `,
+                  `ease-out-expo bg-deepWaterBlue block h-0.5 w-full transition-all duration-500 group-hover:translate-x-0 `,
                   index === linesCount - 1 && 'absolute top-[10px] opacity-0', // last line
                   isOpen &&
                      (index === 0
@@ -41,7 +41,10 @@ const Hamburger = forwardRef<HTMLButtonElement, HamburgerProps>(
 
       return (
          <button
-            className="hamburger size-20 group flex shrink-0 appearance-none items-center justify-center rounded-full bg-white outline-none drop-shadow-md"
+            className={twMerge(
+               'hamburger group flex size-20 shrink-0  transition-all appearance-none items-center justify-center rounded-full outline-none ',
+               !isOpen && 'drop-shadow-md bg-white',
+            )}
             aria-label="toggle navigation"
             aria-expanded={isOpen}
             aria-controls={targetId}

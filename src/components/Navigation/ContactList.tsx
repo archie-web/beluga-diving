@@ -2,7 +2,7 @@ import React from 'react';
 import { twMerge } from 'tailwind-merge';
 
 type ContactProps = {
-   phone: string;
+   phone?: string;
    email?: string;
    className?: string;
 };
@@ -16,13 +16,13 @@ type ContactListProps = Omit<
 export default function ContactList({
    phone,
    email,
-   className,
+   className = '',
    ...rest
 }: ContactListProps) {
    return (
       <ul className={twMerge('space-y-2', className)} {...rest}>
-         <li>Phone: {phone}</li>
-         <li>Email: {email}</li>
+         {phone && <li>Phone: {phone}</li>}
+         {email && <li>Email: {email}</li>}
       </ul>
    );
 }
