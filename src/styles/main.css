@@ -38,6 +38,6 @@ a:not(.button, :has(*)) {
    }
 }
 footer {
-   background-image: url('/images/bg-footer.jpg');
+   /* background-image: url('/images/bg-footer.jpg'); */
    @apply bg-cover bg-top bg-no-repeat;
 }

@@ -1,6 +1,5 @@
-"use client"
+'use client';
 import Image from 'next/image';
-
 
 import { twMerge } from 'tailwind-merge';
 import {
@@ -29,9 +28,9 @@ export const ParallaxImage = ({
    src,
    containerClass,
    imageClass,
-   distance = 100,
-   innerSpeed = 100,
-   outerSpeed = 200,
+   distance = 50,
+   innerSpeed = 77,
+   outerSpeed = 0,
    ratio,
    ...rest
 }: any) => {
@@ -59,10 +58,7 @@ export const ParallaxImage = ({
       <motion.div
          style={{ y }}
          transition={transition}
-         className={twMerge(
-            'bg-champagneYellow/40__ border__ inline-flex',
-            containerClass,
-         )}
+         className={twMerge('w-full', containerClass)}
          ref={ref}
       >
          <div className={twMerge('w-full overflow-hidden', imageClass)}>
@@ -78,7 +74,7 @@ export const ParallaxImage = ({
                   width={600}
                   height={800}
                   alt=""
-                  className={twMerge('h-full w-full scale-150 object-cover')}
+                  className={twMerge('h-full w-full object-cover')}
                   {...rest}
                />
             </motion.figure>

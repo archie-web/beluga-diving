@@ -1,6 +1,9 @@
 import type { StorybookConfig } from '@storybook/nextjs';
 const config: StorybookConfig = {
    stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
+   core: {
+      disableTelemetry: true, // 👈 Disables telemetry
+   },
    addons: [
       '@storybook/addon-links',
       '@storybook/addon-essentials',
@@ -13,7 +16,7 @@ const config: StorybookConfig = {
             postCss: true,
          },
       },
-      '@storybook/addon-mdx-gfm'
+      '@storybook/addon-mdx-gfm',
    ],
    framework: {
       name: '@storybook/nextjs',
