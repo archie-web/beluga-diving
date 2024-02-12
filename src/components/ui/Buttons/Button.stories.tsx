@@ -22,13 +22,13 @@ export const Default: Story = {
    },
 };
 
-export const Outline: Story = {
-    args: {
-        outline: true,
-        color: 'orange',
-        ...Default.args,
-    },
-}
+// export const Outline: Story = {
+//     args: {
+//         outline: true,
+//         color: 'orange',
+//         ...Default.args,
+//     },
+// }
 
 // export const OutlineStyle: Story = {
 //    args: {

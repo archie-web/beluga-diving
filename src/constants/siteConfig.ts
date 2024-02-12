@@ -15,7 +15,7 @@ const SITE_CONFIG = {
    PHONE_NUMBER: '0800 123 456',
    MOBILE: '022 044 6761',
    EMAIL: 'archie@archie.kiwi',
-   BRAND_COLOUR: theme && theme.colors ? theme.colors.primaryColour : '#222222',
+   BRAND_COLOUR: '#0A2342',
    SITE_ROOT_PATH: '/',
 
    GOOGLE_ANALYTICS_ID: 'G-X0X0X0000',

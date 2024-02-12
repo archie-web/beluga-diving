@@ -63,6 +63,6 @@ export const Large: Story = {
 export const NoPadding: Story = {
    args: {
       ...Default.args,
-      collapse: true,
+      flush: true,
    },
 };

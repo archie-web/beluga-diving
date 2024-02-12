@@ -19,12 +19,6 @@ function generateSiteMap() {
        <changefreq>monthly</changefreq>
        <priority>1</priority>
      </url>
-     <url>
-        <loc>${SITE_CONFIG.SITE_URL}/contact</loc>
-        <lastmod>${getCurrentISODate()}</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-     </url>
    </urlset>
  `;
 }
