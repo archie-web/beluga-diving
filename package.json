@@ -1,7 +1,7 @@
 {
    "name": "beluga-diving",
    "private": true,
-   "version": "1.0.9",
+   "version": "1.0",
    "scripts": {
       "dev": "PORT=676 next dev",
       "build": "next build",
