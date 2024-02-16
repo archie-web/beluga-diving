@@ -58,6 +58,15 @@ export const Header = ({
       [isActive],
    );
 
+   // create handel link click function
+   const handelLinkClick = useCallback(
+      (e: React.MouseEvent<HTMLAnchorElement>) => {
+         e.stopPropagation();
+         setActive(false);
+      },
+      [],
+   );
+
    const handleOutsideClick = useCallback(
       (e: MouseEvent | TouchEvent) => {
          // first checks if the menuRef.current and hamburgerRef.current elements exist
@@ -126,7 +135,13 @@ export const Header = ({
          </div> */}
          <HStack spacing="lg">
             {/* <DesktopNavigation /> */}
-            <MobileNav isActive={isActive} data={ARR} ref={menuRef} />
+            <MobileNav
+               isActive={isActive}
+               data={ARR}
+               ref={menuRef}
+               onClick={handelLinkClick}
+            />
+
             <Hamburger
                onClick={handleHamburgerClick}
                isOpen={isActive}
@@ -138,7 +153,7 @@ export const Header = ({
          <div
             className={twMerge(
                "fixed inset-0 w-full transition-all content-['']",
-               isActive ? 'bg-black/40 backdrop-blur-sm visible' : 'invisible',
+               isActive ? 'visible bg-black/40 backdrop-blur-sm' : 'invisible',
             )}
             style={{ zIndex: ZINDEX.NAVIGATION - 1 }}
          />

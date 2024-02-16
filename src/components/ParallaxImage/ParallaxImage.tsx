@@ -58,12 +58,12 @@ export const ParallaxImage = ({
       <motion.div
          style={{ y }}
          transition={transition}
-         className={twMerge('w-full', containerClass)}
+         className={twMerge('size-full', containerClass)}
          ref={ref}
       >
-         <div className={twMerge('w-full overflow-hidden', imageClass)}>
+         <div className={twMerge('size-full overflow-hidden', imageClass)}>
             <motion.figure
-               className={twMerge('', ratio)}
+               className={twMerge('size-full', ratio)}
                style={{ y: innerY }}
                transition={transition}
                // initial={{ scale: 2, opacity: 0 }}
@@ -74,7 +74,7 @@ export const ParallaxImage = ({
                   width={600}
                   height={800}
                   alt=""
-                  className={twMerge('h-full w-full object-cover')}
+                  className={twMerge('size-full object-cover')}
                   {...rest}
                />
             </motion.figure>

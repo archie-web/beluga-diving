@@ -43,10 +43,11 @@ const Banner = ({ speed = -125 }) => {
          <div className="pb-space lg:hidden">
             <Image
                src="/images/img-divers-sm.jpg"
-               alt="diving"
+               className="w-full"
+               alt="diving into the sea"
                width={876}
                height={743}
-               className="w-full"
+               priority
             />
          </div>
          <div className="absolute right-0 top-0 z-[-1] hidden w-1/2 lg:block xl:w-2/5">

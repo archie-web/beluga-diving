@@ -1,5 +1,6 @@
+'use client';
+
 import SITE_CONFIG from '@/constants/siteConfig';
-import { Logo } from '@/components/ui/Logo';
 import { ZINDEX } from '@constants/zIndex';
 import { motion, stagger, useAnimate } from 'framer-motion';
 import { forwardRef, useEffect } from 'react';
@@ -7,7 +8,6 @@ import { twMerge } from 'tailwind-merge';
 import NextLink from '../NextLink';
 import ContactList from './ContactList';
 import { navItems } from './navItems';
-import SubMenuItems from './SubMenuItems';
 
 export interface menuItemProps {
    label: string;
@@ -45,12 +45,13 @@ interface MobileNavProps {
    isActive: boolean;
    customCloseButtonn?: boolean;
    data: any;
-   //    onClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
+   // define the type of the onClick function
+   onClick: (event: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
 export const MobileNav = forwardRef<HTMLDivElement, MobileNavProps>(
-   function MobileNavFunction({ isActive, data }, ref) {
-      const animateItem = useMenuAnimation(isActive);
+   function MobileNavFunction({ isActive, onClick, data }, ref) {
+      // const animateItem = useMenuAnimation(isActive);
       /* control user scroll when open navigation */
       useEffect(() => {
          isActive
@@ -64,7 +65,7 @@ export const MobileNav = forwardRef<HTMLDivElement, MobileNavProps>(
             animate={{ x: isActive ? 0 : '100%' }}
             transition={{
                type: 'spring',
-               //    bounce: 0,
+               // bounce: 0,
                duration: slideAnimateTiming,
                stiffness: 80,
                damping: 15,
@@ -77,22 +78,23 @@ export const MobileNav = forwardRef<HTMLDivElement, MobileNavProps>(
          >
             <div className="space-y-sm" data-testid="nav-content">
                <ul
-                  className="relative space-y-[1.25em] text-2xl opacity-90 -translate-y-4"
+                  className="relative -translate-y-4 space-y-[1.25em] text-2xl opacity-90"
                   id="primary-menu"
-                  ref={animateItem}
+                  // ref={animateItem}
                >
                   {navItems.map((item) => (
                      <li key={item.label}>
                         <NextLink
                            className="font-extrabold uppercase"
                            href={item.uri}
+                           onClick={onClick}
                         >
                            {item.label}
                         </NextLink>
                      </li>
                   ))}
                   <li>
-                    Email: <br/>
+                     Contact Us: <br />
                      <a href={`mailto:${SITE_CONFIG.EMAIL}`}>
                         {SITE_CONFIG.EMAIL}
                      </a>{' '}

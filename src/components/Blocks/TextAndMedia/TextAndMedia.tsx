@@ -44,7 +44,7 @@ export const TextAndMedia = ({
    const fadeInRef = useRef<HTMLDivElement>(null);
    return (
       <section
-         className={twMerge('lg:pt-space pb-10', className)}
+         className={twMerge('pt-space pb-10', className)}
          ref={fadeInRef}
          id="about-us"
       >
