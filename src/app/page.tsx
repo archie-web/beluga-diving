@@ -3,6 +3,8 @@ import Gallery from '@/components/Blocks/Gallery';
 import ServiceList from '@/components/Blocks/ServiceList';
 import TextAndMedia from '@/components/Blocks/TextAndMedia';
 import TwoColumns from '@/components/Blocks/TwoColumns';
+import { offers } from '@/data/offers';
+import { about } from '@/data/about';
 import SITE_CONFIG from '@/constants/siteConfig';
 import { Metadata } from 'next';
 
@@ -16,10 +18,10 @@ export default function Page() {
       <>
          <Banner />
          <TextAndMedia />
-         <ServiceList />
-         <TwoColumns />
+         <ServiceList data={offers} />
+         <TwoColumns data={about} />
          {/* <section className="py-space space-y-16 lg:space-y-24"> */}
-            <Gallery />
+         <Gallery />
          {/* </section> */}
       </>
    );

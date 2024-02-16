@@ -40,17 +40,17 @@ const Banner = ({ speed = -125 }) => {
 
    return (
       <section className="banner ralative">
-         <div className="pb-space lg:hidden">
+         <div className="pb-space lg:hidden flex justify-end">
             <Image
                src="/images/img-divers-sm.jpg"
-               className="w-full"
+               className="w-full max-w-3xl"
                alt="diving into the sea"
                width={876}
                height={743}
                priority
             />
          </div>
-         <div className="absolute right-0 top-0 z-[-1] hidden w-1/2 lg:block xl:w-2/5">
+         <div className="absolute right-0 top-0 z-[-1] hidden w-1/2 lg:block max-w-3xl 3xl:max-w-4xl">
             <div className="bg-deepWaterBlue relative aspect-square overflow-hidden">
                <motion.div style={{ y }} transition={transition} ref={ref}>
                   <Image
@@ -77,7 +77,7 @@ const Banner = ({ speed = -125 }) => {
             </div>
          </div>
          <Container className="relative z-10">
-            <div className="max-w-xl space-y-4 lg:space-y-16">
+            <div className="mx-auto max-w-xl space-y-8 lg:mx-0 lg:space-y-16">
                <Logo />
                <div className="space-y-7">
                   <h1>

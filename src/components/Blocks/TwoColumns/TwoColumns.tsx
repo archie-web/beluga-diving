@@ -3,23 +3,19 @@ import { Text } from '@/components/ui/text';
 import { about } from '@/data/about';
 import parse from 'html-react-parser';
 import Image from 'next/image';
+import { ListItemProps, AnimateList } from '@/components/AnimateList';
 
-interface Props {
-   data: {
-      tagline: string;
-      bodyAdvanced: string;
-      linkField?: {
-         text: string;
-         url: string;
-      };
-   };
-}
+type ServiceListProps = {
+   className?: string;
+   data: ListItemProps[];
+};
 
-export const TwoColumns = ({}) => {
+export const TwoColumns = ({ data }: ServiceListProps) => {
    return (
-      <section className='py-space bg-transparent'>
-         <Container className="grid gap-12 lg:grid-cols-2">
-            {about.map((item, index) => (
+      <section className="py-space bg-transparent">
+         <Container className="">
+            <AnimateList items={data} />
+            {/* {data.map((item, index) => (
                <div className="space-y-md" key={index}>
                   <div className="flex shrink-0 items-center gap-8">
                      <Image
@@ -34,7 +30,7 @@ export const TwoColumns = ({}) => {
 
                   <Text className="opacity-70">{parse(item.content)}</Text>
                </div>
-            ))}
+            ))} */}
          </Container>
       </section>
    );

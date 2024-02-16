@@ -1,5 +1,6 @@
 import { clsx } from 'clsx';
 import { Link } from './link';
+import { twMerge } from 'tailwind-merge';
 
 export function Text({
    className,
@@ -7,9 +8,9 @@ export function Text({
 }: React.ComponentPropsWithoutRef<'p'>) {
    return (
       <p
-         {...props}
          data-slot="text"
-         className={clsx(className, 'text-lg/7 opacity-75')}
+         className={clsx(className, 'text-[17px] leading-[1.8] opacity-70')}
+         {...props}
       />
    );
 }

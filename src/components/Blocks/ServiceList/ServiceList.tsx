@@ -1,23 +1,10 @@
-'use client';
-
 import { Container } from '@/components/Container';
-import NextLink, { LinkFieldProps } from '@/components/NextLink';
-import parse from 'html-react-parser';
-import { ElementOrSelector, animate, inView, stagger } from 'motion';
-import { twMerge } from 'tailwind-merge';
-import Image from 'next/image';
-import { Text } from '@/components/ui/text';
-import { CheckCircleIcon } from '@heroicons/react/24/solid';
-import { offers } from '@/data/offers';
+import { ListItemProps, AnimateList } from '@/components/AnimateList';
 
-interface ServiceListProps {
+type ServiceListProps = {
    className?: string;
-   data?: {
-      title: string;
-      content: string;
-      imageUri: string;
-   };
-}
+   data: ListItemProps[];
+};
 
 export const ServiceList = ({ data }: ServiceListProps) => {
    return (
@@ -28,8 +15,10 @@ export const ServiceList = ({ data }: ServiceListProps) => {
          <section id="services">
             <div className="pb-space bg-sky-50 pt-20">
                <Container>
-                  <div className="flex flex-col items-center gap-5 text-center pb-space">
-                     <h3 className="h4 text-orange-600 uppercase">Our services</h3>
+                  <div className="pb-space flex flex-col items-center gap-5 text-center">
+                     <h3 className="h4 uppercase text-orange-600">
+                        Our services
+                     </h3>
                      <h2 className="h1">Beluga Diving Vavau also offers</h2>
                      {/* <Text className="">
                         Lorem ipsum, dolor sit amet consectetur adipisicing
@@ -41,36 +30,11 @@ export const ServiceList = ({ data }: ServiceListProps) => {
                      </Text> */}
                   </div>
 
-                  <ul className="grid gap-10 gap-x-12 md:grid-cols-2 lg:gap-y-24">
-                     {offers.map((item, index) => (
-                        <li
-                           className="flex flex-col items-center gap-6 lg:flex-row lg:items-start"
-                           key={index}
-                        >
-                           <div className="shrink-0">
-                              <Image
-                                 src={item.imageUri}
-                                 width={120}
-                                 height={120}
-                                 alt="snorkel"
-                                 className="h-24 w-auto object-contain"
-                              />
-                           </div>
-
-                           <div className="space-y-4 text-center lg:text-left">
-                              <h4 className="h3">{item.title}</h4>
-                              <Text className="opacity-70">{item.content}</Text>
-                           </div>
-                        </li>
-                     ))}
-                  </ul>
+                  <AnimateList items={data} />
                </Container>
             </div>
          </section>
-         <svg
-            viewBox="0 0 1690 256"
-            className="w-full fill-sky-50"
-         >
+         <svg viewBox="0 0 1690 256" className="w-full fill-sky-50">
             <path d="m1690 256-70.42-10.7C1549.17 235 1408.33 213 1267.5 208c-140.83-5-281.667 5-422.5-21.3C704.167 160 563.333 96 422.5 101.3 281.667 107 140.833 181 70.417 218.7L0 256V0h1690v256Z" />
          </svg>
       </>
