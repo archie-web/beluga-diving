@@ -11,7 +11,8 @@ import { navItems } from './navItems';
 
 export interface menuItemProps {
    label: string;
-   children: any;
+   uri: string;
+   children?: any;
 }
 
 const slideAnimateTiming = 0.5;
@@ -46,7 +47,7 @@ interface MobileNavProps {
    customCloseButtonn?: boolean;
    data: any;
    // define the type of the onClick function
-   onClick: (event: React.MouseEvent<HTMLAnchorElement>) => void;
+   onClick?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
 export const MobileNav = forwardRef<HTMLDivElement, MobileNavProps>(
@@ -82,7 +83,7 @@ export const MobileNav = forwardRef<HTMLDivElement, MobileNavProps>(
                   id="primary-menu"
                   // ref={animateItem}
                >
-                  {navItems.map((item) => (
+                  {data.map((item: menuItemProps) => (
                      <li key={item.label}>
                         <NextLink
                            className="font-extrabold uppercase"

@@ -7,8 +7,9 @@ import { DesktopNavigation, MobileNav } from '@components/Navigation';
 import { ZINDEX } from '@constants/zIndex';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { twMerge } from 'tailwind-merge';
+import { navItems } from '@/components/Navigation/navItems';
 
-export const ARR = Array.from({ length: 3 }, (_, index) => index + 1);
+// export const ARR = Array.from({ length: 3 }, (_, index) => index + 1);
 
 // extends HTMLAttributes<HTMLDivElement> but omit className
 interface HeaderProps
@@ -137,7 +138,7 @@ export const Header = ({
             {/* <DesktopNavigation /> */}
             <MobileNav
                isActive={isActive}
-               data={ARR}
+               data={navItems}
                ref={menuRef}
                onClick={handelLinkClick}
             />

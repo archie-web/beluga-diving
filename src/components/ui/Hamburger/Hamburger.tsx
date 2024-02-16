@@ -1,3 +1,5 @@
+// 'use client';
+
 import React, { forwardRef } from 'react';
 import { twMerge } from 'tailwind-merge';
 import { motion } from 'framer-motion';
@@ -42,8 +44,8 @@ const Hamburger = forwardRef<HTMLButtonElement, HamburgerProps>(
       return (
          <button
             className={twMerge(
-               'hamburger group flex size-20 shrink-0  transition-all appearance-none items-center justify-center rounded-full outline-none ',
-               !isOpen && 'drop-shadow-md bg-white',
+               'hamburger group flex size-20 shrink-0  appearance-none items-center justify-center rounded-full outline-none transition-all ',
+               !isOpen && 'bg-white drop-shadow-md',
             )}
             aria-label="toggle navigation"
             aria-expanded={isOpen}
