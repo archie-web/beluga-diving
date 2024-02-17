@@ -12,7 +12,7 @@ type ServiceListProps = {
 
 export const TwoColumns = ({ data }: ServiceListProps) => {
    return (
-      <section className="py-space bg-transparent">
+      <section className="pb-space pt-20 bg-transparent">
          <Container className="">
             <AnimateList items={data} />
             {/* {data.map((item, index) => (

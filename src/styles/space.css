@@ -4,6 +4,11 @@
    }
    .pb-space {
       padding-bottom: var(--space-xl-2xl);
+      &.bg-transparent {
+         + .bg-transparent {
+            @apply !pt-0;
+         }
+      }
    }
    .pl-space {
       padding-left: var(--space-m-l);
@@ -18,9 +23,6 @@
       @apply pt-space pb-space;
       &.bg-transparent {
          + .bg-transparent {
-            @apply !pt-0;
-         }
-         + .pos-offset {
             @apply !pt-0;
          }
       }
