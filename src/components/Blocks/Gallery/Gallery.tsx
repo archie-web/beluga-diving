@@ -21,7 +21,8 @@ const GalleryPhoto = ({ src, alt, className, ...rest }: Props) => {
    return (
       <PhotoView src={src}>
          <picture className="cursor-pointer overflow-hidden rounded-xl">
-            <source srcSet={convertToWebpFileName(src)} type="image/webp" />
+            {/* <source srcSet={convertToWebpFileName(src)} type="image/webp" /> */}
+            <source srcSet={src} type="image/jpeg" />
             <Image
                src={src}
                alt={alt}
@@ -45,7 +46,7 @@ export const Gallery = ({ reversed = false }) => {
          <h2 className="h1 text-center">Photo Gallery</h2>
          <Container
             className={twJoin(
-               'flex flex-col lg:flex-row',
+               'flex flex-col lg:grid lg:grid-cols-2',
                gridSpacing,
                reversed && 'lg:flex-row-reverse',
             )}
@@ -55,14 +56,14 @@ export const Gallery = ({ reversed = false }) => {
                <div className={twJoin('grid flex-1 grid-cols-2', gridSpacing)}>
                   <div className={twJoin('grid', gridSpacing)}>
                      <GalleryPhoto
-                        src="https://source.unsplash.com/7i5HMCGupVw"
+                        src="/images/gallery/gladiator_portside.jpg"
                         alt={SITE_CONFIG.SITE_NAME}
                         width={400}
                         height={400}
                         className="aspect-square"
                      />
                      <GalleryPhoto
-                        src="https://source.unsplash.com/mUIph40dQyA"
+                        src="/images/gallery/split-rock-with-text.jpg"
                         alt={SITE_CONFIG.SITE_NAME}
                         width={400}
                         height={400}
@@ -70,7 +71,7 @@ export const Gallery = ({ reversed = false }) => {
                   </div>
 
                   <GalleryPhoto
-                     src="https://source.unsplash.com/dtCTfjTEOgg"
+                     src="/images/gallery/opa_sternportside.jpg"
                      alt={SITE_CONFIG.SITE_NAME}
                      width={300}
                      height={680}
@@ -86,7 +87,7 @@ export const Gallery = ({ reversed = false }) => {
                {/* </div> */}
                <div className={twJoin('flex flex-1 flex-col', gridSpacing)}>
                   <GalleryPhoto
-                     src="https://source.unsplash.com/8j4KMOCMOfw"
+                     src="/images/gallery/cave.jpg"
                      alt={SITE_CONFIG.SITE_NAME}
                      width={600}
                      height={500}
@@ -98,7 +99,7 @@ export const Gallery = ({ reversed = false }) => {
                      )}
                   >
                      <GalleryPhoto
-                        src="https://source.unsplash.com/9E9NsEiUGxg"
+                        src="/images/gallery/whale-2.jpg"
                         alt={SITE_CONFIG.SITE_NAME}
                         width={600}
                         height={500}
@@ -106,11 +107,45 @@ export const Gallery = ({ reversed = false }) => {
                      />
 
                      <GalleryPhoto
-                        src="https://source.unsplash.com/yHaburAEFo4"
+                        src="/images/gallery/whale-6.jpg"
                         alt={SITE_CONFIG.SITE_NAME}
                         width={400}
                         height={400}
                         className="aspect-square"
+                     />
+                  </div>
+               </div>
+
+               <div className={twJoin('flex', gridSpacing)}>
+                  <GalleryPhoto
+                     src="/images/gallery/clownfish-heaven.jpg"
+                     alt={SITE_CONFIG.SITE_NAME}
+                     width={600}
+                     height={600}
+                  />
+               </div>
+
+               <div className={twJoin('grid flex-1 grid-cols-2', gridSpacing)}>
+                  <GalleryPhoto
+                     src="/images/gallery/gladiator-bow__portside.jpg"
+                     alt={SITE_CONFIG.SITE_NAME}
+                     width={300}
+                     height={680}
+                  />
+
+                  <div className={twJoin('grid', gridSpacing)}>
+                     <GalleryPhoto
+                        src="/images/gallery/white-whale.jpg"
+                        alt={SITE_CONFIG.SITE_NAME}
+                        width={400}
+                        height={400}
+                        className="aspect-square"
+                     />
+                     <GalleryPhoto
+                        src="/images/gallery/whale-4.jpg"
+                        alt={SITE_CONFIG.SITE_NAME}
+                        width={400}
+                        height={400}
                      />
                   </div>
                </div>
