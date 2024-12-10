@@ -77,7 +77,7 @@ const Banner = ({ speed = -125 }) => {
             </div>
          </div>
          <Container className="relative z-10">
-            <div className="mx-auto max-w-xl space-y-8 lg:mx-0 lg:space-y-16">
+            <div className="mx-auto max-w-2xl space-y-8 lg:mx-0 lg:space-y-16">
                <Logo />
                <div className="space-y-7">
                   <h1>

@@ -5,7 +5,7 @@
    --font-size-sm: clamp(0.75rem, calc(0.72rem + 0.13vw), 0.88rem);
 
    /* 36px → 44px */
-   --font-size-h1: clamp(2.25rem, 2.0918rem + 0.6751vi, 2.75rem);
+   --font-size-h1: clamp(2.25rem, 2.0918rem + 0.6751vi, 3rem);
 
      /* 28px → 32px */
   --font-size-h2: clamp(1.75rem, 1.6709rem + 0.3376vi, 2rem);

@@ -16,18 +16,14 @@ export const ServiceList = ({ data }: ServiceListProps) => {
             <div className="bg-sky-50 py-20">
                <Container>
                   <div className="pb-space flex flex-col items-center gap-5 text-center">
-                     <h3 className="h4 uppercase text-orange-600">
-                        Our services
-                     </h3>
+                     <h3 className="h4 text-orange-600">Our services</h3>
                      <h2 className="h1">Beluga Diving Vavau also offers</h2>
-                     {/* <Text className="">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing
-                        elit. Voluptate unde, perferendis expedita quaerat
-                        cupiditate libero labore corrupti recusandae incidunt
-                        officia molestias voluptatem magnam tempora commodi
-                        ullam? Quidem soluta ex asperiores vitae ducimus
-                        voluptatem.
-                     </Text> */}
+                     <p className="max-w-4xl">
+                        Our adventurous scuba diving activity visits several
+                        different dive sites, caves, swim through and coral
+                        sites aiming to provide you with memories that will last
+                        long.
+                     </p>
                   </div>
 
                   <AnimateList items={data} />

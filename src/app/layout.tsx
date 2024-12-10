@@ -4,14 +4,21 @@ import Header from '@/components/Header';
 // import ModeToggleButton from '@/components/ModeToggleButton';
 import '@/styles/main.css';
 import { Metadata } from 'next';
-import { Noto_Sans } from 'next/font/google';
+import { Noto_Sans, Shrikhand } from 'next/font/google';
 import { twJoin } from 'tailwind-merge';
 
 // If loading a variable font, you don't need to specify the font weight
 const notoSans = Noto_Sans({
    subsets: ['latin'],
    display: 'swap',
+   variable: '--font-noto-sans',
 });
+
+const shrikhand = Shrikhand({
+    subsets: ['latin'],
+    weight: '400', // Explicitly specify the available weight
+    variable: '--font-shrikhand',
+ });
 
 export default function RootLayout({
    // Layouts must accept a children prop.
@@ -23,11 +30,11 @@ export default function RootLayout({
    return (
       <html
          lang="en"
-         className={twJoin('scroll-smooth antialiased', notoSans.className)}
+         className={twJoin('scroll-smooth antialiased font-sans', notoSans.variable, shrikhand.variable)}
       >
-        <head>
-        <FavIcon />
-        </head>
+         <head>
+            <FavIcon />
+         </head>
          <body>
             <Header isSticky />
             <main className="relative" data-testid="entry-content">

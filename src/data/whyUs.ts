@@ -2,7 +2,7 @@ export const whyUs = [
    {
       title: 'Over 30 years experiences',
       content:
-         'Beluga Dive Vavau has been owned and operated by the original owner for 30 years.',
+         'Beluga Dive Vavau has been owned and operated by the original owner for 30 years. Our local skippers and guides are licensed to provide you with the best swimming and communication service.',
    },
    {
       title: 'Great Rates',

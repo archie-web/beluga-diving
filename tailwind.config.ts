@@ -49,8 +49,8 @@ const config: Config = {
             '6/4': '6 / 4',
          },
          fontFamily: {
-            sans: ['Roboto', ...fallbackFonts],
-            headings: ['Roboto Bold', ...fallbackFonts],
+            sans: ['var(--font-noto-sans)', ...fallbackFonts],
+            headings: ['var(--font-shrikhand)', ...fallbackFonts],
             serif: ['Georgia', 'serif'],
          },
       },
