@@ -1,7 +1,7 @@
 /* Typography */
 @layer base {
    .heading {
-      @apply font-extrabold leading-none font-headings;
+      @apply font-extrabold leading-[1.2] font-headings;
    }
    .h1,
    h1 {
