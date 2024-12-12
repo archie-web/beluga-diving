@@ -20,7 +20,9 @@ export default function Page() {
          <TextAndMedia />
          <ServiceList data={offers} />
          <TwoColumns data={about} />
+         {/* <section className="py-space space-y-16 lg:space-y-24"> */}
          <Gallery />
+         {/* </section> */}
       </>
    );
 }
