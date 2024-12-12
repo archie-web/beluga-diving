@@ -47,7 +47,7 @@ export function AnimateList({ items }: ListProps) {
                         src={item.imageUri}
                         width={120}
                         height={120}
-                        alt="snorkel"
+                        alt={item.title}
                         className="h-24 w-auto object-contain"
                      />
                   </div>
