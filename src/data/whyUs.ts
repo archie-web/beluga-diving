@@ -11,6 +11,6 @@ export const whyUs = [
    },
    {
       title: 'Whale Swim',
-      content: "Create an unforgettable memory by swimming with the world's largest mammal. Witness the awe-inspiring migration of humpback whales as they pass through Tonga from the last week of July to the end of October. Embark on a remarkable boat trip and immerse yourself in the unparalleled experience of swimming alongside these magnificent creatures."
+      content: "Create an unforgettable memory by swimming with the world's largest mammal. Witness the awe-inspiring migration of humpback whales as they arrive earlier then 3 third week of July and leave beyond October. Whaleswim starts from first of July up to first week of November. Embark on a remarkable boat trip and immerse yourself in the unparalleled experience of swimming alongside these magnificent creatures."
    },
 ];
