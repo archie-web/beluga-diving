@@ -149,6 +149,64 @@ export const Gallery = ({ reversed = false }) => {
                      />
                   </div>
                </div>
+
+
+
+               <div className={twJoin('flex flex-1 flex-col', gridSpacing)}>
+                  <GalleryPhoto
+                     src="/images/gallery/whale-mother-and-calf.jpg"
+                     alt={SITE_CONFIG.SITE_NAME}
+                     width={600}
+                     height={500}
+                  />
+                  <div
+                     className={twJoin(
+                        'grid flex-none grid-cols-2',
+                        gridSpacing,
+                     )}
+                  >
+                     <GalleryPhoto
+                        src="/images/gallery/whale-10.jpg"
+                        alt={SITE_CONFIG.SITE_NAME}
+                        width={600}
+                        height={500}
+                        className="aspect-square"
+                     />
+
+                     <GalleryPhoto
+                        src="/images/gallery/whale-9.jpg"
+                        alt={SITE_CONFIG.SITE_NAME}
+                        width={400}
+                        height={400}
+                        className="aspect-square"
+                     />
+                  </div>
+               </div>
+
+               <div className={twJoin('grid flex-1 grid-cols-2', gridSpacing)}>
+                  <div className={twJoin('grid', gridSpacing)}>
+                     <GalleryPhoto
+                        src="/images/gallery/whale-1.jpg"
+                        alt={SITE_CONFIG.SITE_NAME}
+                        width={400}
+                        height={400}
+                        className="aspect-square"
+                     />
+                     <GalleryPhoto
+                        src="/images/gallery/whale-3.jpg"
+                        alt={SITE_CONFIG.SITE_NAME}
+                        width={400}
+                        height={400}
+                     />
+                  </div>
+
+                  <GalleryPhoto
+                     src="/images/gallery/whale-5.jpg"
+                     alt={SITE_CONFIG.SITE_NAME}
+                     width={300}
+                     height={680}
+                  />
+               </div>
             </PhotoProvider>
          </Container>
       </section>

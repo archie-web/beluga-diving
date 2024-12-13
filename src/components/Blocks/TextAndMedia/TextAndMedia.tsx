@@ -111,7 +111,7 @@ export const TextAndMedia = ({
                      className="size-full"
                   >
                      <Image
-                        src="/images/img-whale.jpg"
+                        src="/images/gallery/whale-2.jpg"
                         alt="whale"
                         width={1024}
                         height={1024}
