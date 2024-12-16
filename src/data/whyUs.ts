@@ -11,6 +11,6 @@ export const whyUs = [
    },
    {
       title: 'Whale Swim',
-      content: "Create an unforgettable memory by swimming with the world's largest mammal. Witness the awe-inspiring migration of humpback whales as they arrive earlier then 3 third week of July and leave beyond October. Whaleswim starts from first of July up to first week of November. Embark on a remarkable boat trip and immerse yourself in the unparalleled experience of swimming alongside these magnificent creatures."
+      content: "Create an unforgettable memory by swimming with the world's largest mammal. Witness the awe-inspiring migration of humpback whales, which begins as early as June and extends beyond October. Our Whale Swim season runs from the 1st of July to the first week of November. Embark on a remarkable boat trip and immerse yourself in the unparalleled experience of swimming alongside these magnificent creatures."
    },
 ];
