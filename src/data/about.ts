@@ -9,7 +9,7 @@ export const about = [
    {
       title: 'Our Boats',
       content:
-         'Our dive operation is equipped with two distinct boats: MV GLADIATOR, a 34-ft catamaran aluminum boat featuring a cabin with Twin 150 h/p. This vessel comfortably accommodates up to 12 divers, cruising at a speed of 25 knots. Additionally, we have MAD MAX, our versatile runabout boat ideal for Open Water student excursions. With a capacity for 8 divers, MAD MAX travels at a steady 19 knots, ensuring a comfortable and efficient experience on the water.',
+         'We operate for the whaleswim and Scuba diving 2 Aluminum 34 feet Power Catamarans equipped with fly bridge,shade,toilet and cabin.',
       imageUri: '/images/img-icon-boat.png',
    },
 ];

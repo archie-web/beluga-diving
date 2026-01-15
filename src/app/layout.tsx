@@ -2,6 +2,7 @@ import FavIcon from '@/components/FavIcon';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 // import ModeToggleButton from '@/components/ModeToggleButton';
+import SITE_CONFIG from '@/constants/siteConfig';
 import '@/styles/main.css';
 import { Metadata } from 'next';
 import { Noto_Sans, Shrikhand } from 'next/font/google';
@@ -46,6 +47,10 @@ export default function RootLayout({
    );
 }
 export const metadata: Metadata = {
-   title: 'Home',
-   description: 'Welcome to Next.js',
+   metadataBase: new URL(SITE_CONFIG.SITE_URL),
+   title: {
+      default: SITE_CONFIG.SITE_NAME,
+      template: `%s | ${SITE_CONFIG.SITE_NAME}`,
+   },
+   description: SITE_CONFIG.SITE_DESCRIPTION,
 };
