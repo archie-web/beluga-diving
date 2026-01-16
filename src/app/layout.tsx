@@ -5,14 +5,14 @@ import Header from '@/components/Header';
 import SITE_CONFIG from '@/constants/siteConfig';
 import '@/styles/main.css';
 import { Metadata } from 'next';
-import { Noto_Sans, Shrikhand } from 'next/font/google';
+import { Inter, Shrikhand } from 'next/font/google';
 import { twJoin } from 'tailwind-merge';
 
 // If loading a variable font, you don't need to specify the font weight
-const notoSans = Noto_Sans({
+const inter = Inter({
    subsets: ['latin'],
    display: 'swap',
-   variable: '--font-noto-sans',
+   variable: '--font-inter',
 });
 
 const shrikhand = Shrikhand({
@@ -31,12 +31,12 @@ export default function RootLayout({
    return (
       <html
          lang="en"
-         className={twJoin('scroll-smooth antialiased font-sans', notoSans.variable, shrikhand.variable)}
+         className={twJoin('scroll-smooth antialiased font-sans', inter.variable, shrikhand.variable)}
       >
          <head>
             <FavIcon />
          </head>
-         <body>
+         <body className='text-deepWaterBlue'>
             <Header isSticky />
             <main className="relative" data-testid="entry-content">
                {children}

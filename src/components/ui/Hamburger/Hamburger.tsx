@@ -35,7 +35,7 @@ const Hamburger = forwardRef<HTMLButtonElement, HamburgerProps>(
                animate={{ width: '100%' }}
                transition={{
                   delay: 0.5 + index * 0.123,
-                  type: 'spring',
+                //   type: 'spring',
                }}
             />
          ));
@@ -45,7 +45,7 @@ const Hamburger = forwardRef<HTMLButtonElement, HamburgerProps>(
          <button
             className={twMerge(
                'hamburger group flex size-20 shrink-0  appearance-none items-center justify-center rounded-full outline-none transition-all ',
-               !isOpen && 'bg-white drop-shadow-md',
+               !isOpen && 'bg-white',
             )}
             aria-label="toggle navigation"
             aria-expanded={isOpen}

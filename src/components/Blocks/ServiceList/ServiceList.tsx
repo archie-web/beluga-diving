@@ -18,7 +18,7 @@ export const ServiceList = ({ data }: ServiceListProps) => {
                   <div className="pb-space flex flex-col items-center gap-5 text-center">
                      <h3 className="h4 text-orange-600">Our services</h3>
                      <h2 className="h1">Beluga Diving Vavau also offers</h2>
-                     <p className="max-w-4xl">
+                     <p className="max-w-4xl leading">
                         Our adventurous scuba diving activity visits several
                         different dive sites, caves, swim through and coral
                         sites aiming to provide you with memories that will last

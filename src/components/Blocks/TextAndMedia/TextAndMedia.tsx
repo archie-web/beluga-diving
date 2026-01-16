@@ -177,7 +177,7 @@ function FadeInList({ items }: ListProps) {
             <motion.li className="space-y-2" key={index} variants={animateItem}>
                <div className="flex items-center gap-4">
                   <CheckCircleIcon className="size-12 text-sky-300 " />
-                  <h3 className="h3 leading-none text-sky-900">{item.title}</h3>
+                  <h3 className="h3 leading-none">{item.title}</h3>
                </div>
                {item.content && <Text className="pl-16">{item.content}</Text>}
             </motion.li>

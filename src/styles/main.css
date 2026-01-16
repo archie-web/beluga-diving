@@ -41,3 +41,12 @@ footer {
    /* background-image: url('/images/bg-footer.jpg'); */
    @apply bg-cover bg-top bg-no-repeat;
 }
+
+
+.svg-mask {
+	-webkit-mask-image: url("/images/shape.svg");
+	mask-image: url("/images/shape.svg");
+	mask-repeat: no-repeat;
+	mask-size: contain;
+	mask-position: center;
+}

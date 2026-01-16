@@ -66,18 +66,17 @@ export const MobileNav = forwardRef<HTMLDivElement, MobileNavProps>(
             animate={{ x: isActive ? 0 : '100%' }}
             transition={{
                type: 'spring',
-               // bounce: 0,
+               bounce: 0,
                duration: slideAnimateTiming,
-               stiffness: 80,
-               damping: 15,
+               ease: 'easeOut',
             }}
             ref={ref}
             className={twMerge(
-               'p-space fixed right-0 top-0 flex h-dvh w-full flex-col justify-center gap-20 overflow-y-auto overflow-x-hidden bg-slate-100  md:w-1/3',
+               'p-12 lg:p-16 lg:pt-40 fixed right-0 top-0 flex h-dvh w-full max-w-[450px] flex-col justify-center lg:justify-start gap-20 overflow-y-auto overflow-x-hidden bg-slate-100 md:w-1/2 lg:max-w-[500px]',
             )}
             style={{ zIndex: ZINDEX.NAVIGATION }}
          >
-            <div className="space-y-sm" data-testid="nav-content">
+            <div className="space-y-lg" data-testid="nav-content">
                <ul
                   className="relative -translate-y-4 space-y-[1.25em] text-2xl opacity-90"
                   id="primary-menu"
@@ -86,7 +85,7 @@ export const MobileNav = forwardRef<HTMLDivElement, MobileNavProps>(
                   {data.map((item: menuItemProps) => (
                      <li key={item.label}>
                         <NextLink
-                           className="font-extrabold uppercase"
+                           className="font-shrikhand text-3xl"
                            href={item.uri}
                            onClick={onClick}
                         >
@@ -94,13 +93,13 @@ export const MobileNav = forwardRef<HTMLDivElement, MobileNavProps>(
                         </NextLink>
                      </li>
                   ))}
-                  <li>
-                     Contact Us: <br />
-                     <a href={`mailto:${SITE_CONFIG.EMAIL}`}>
-                        {SITE_CONFIG.EMAIL}
-                     </a>{' '}
-                  </li>
                </ul>
+               <div className="text-xl">
+                     <p>Email Us:</p>
+                     <a href={`mailto:${SITE_CONFIG.EMAIL}`} aria-label={`Email us at ${SITE_CONFIG.EMAIL}`}>
+                        {SITE_CONFIG.EMAIL}
+                     </a>
+                  </div>
             </div>
          </motion.nav>
       );

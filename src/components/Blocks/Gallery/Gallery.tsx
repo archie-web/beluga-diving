@@ -9,7 +9,7 @@ import Image, { ImageProps } from 'next/image';
 import { convertToWebpFileName } from '@/helpers/convertToWebpFileName';
 
 const imageStyle = 'size-full object-cover ';
-const gridSpacing = 'gap-2 lg:gap-6';
+const gridSpacing = 'gap-2 lg:gap-4';
 
 interface Props extends Omit<ImageProps, 'src, alt, className'> {
    src: any;
@@ -20,7 +20,7 @@ interface Props extends Omit<ImageProps, 'src, alt, className'> {
 const GalleryPhoto = ({ src, alt, className, ...rest }: Props) => {
    return (
       <PhotoView src={src}>
-         <picture className="cursor-pointer overflow-hidden rounded-xl">
+         <picture className="cursor-pointer overflow-hidden rounded-lg">
             {/* <source srcSet={convertToWebpFileName(src)} type="image/webp" /> */}
             <source srcSet={src} type="image/jpeg" />
             <Image

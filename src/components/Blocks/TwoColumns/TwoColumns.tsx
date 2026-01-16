@@ -1,16 +1,12 @@
+import { AnimateList, ListItemProps } from '@/components/AnimateList';
 import { Container } from '@/components/Container';
-import { Text } from '@/components/ui/text';
-import { about } from '@/data/about';
-import parse from 'html-react-parser';
-import Image from 'next/image';
-import { ListItemProps, AnimateList } from '@/components/AnimateList';
 
-type ServiceListProps = {
+type TwoColumnsProps = {
    className?: string;
    data: ListItemProps[];
 };
 
-export const TwoColumns = ({ data }: ServiceListProps) => {
+export const TwoColumns = ({ data }: TwoColumnsProps) => {
    return (
       <section className="pb-space pt-20 bg-transparent">
          <Container className="">

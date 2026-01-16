@@ -67,10 +67,10 @@ const Banner = ({ speed = -125 }) => {
                   viewBox="0 0 1000 1000"
                   width={1000}
                   height={1000}
-                  className="absolute left-0 top-0 size-full scale-y-[101%]"
+                  className="absolute left-0 top-0 size-full scale-y-[101%] text-white"
                >
                   <path
-                     fill="#ffffff"
+                     fill="currentColor"
                      d="M640.6 907.7c-15 5.3-29.4 12.2-43.5 20.2-24.4 13.7-46.8 33-71.8 45.2-13.5 6.6-27.9 11.3-42.4 12-51.8 3.3-85.9-42.7-99.1-97.9-5.3-21-7.6-43.2-10.8-65-3.3-23.4-8.6-46.1-16.3-68.1-30.3-85.9-83.6-141.1-159.4-166-67.9-24.3-152.4-43.5-185.6-126.7C2.7 438.5.2 413 .9 388.1c.3-9.1 1-18.1 2-27.2 7.2-58.6 21.8-115.4 40-170.4 19.6-58.7 28.7-134 28.7-156.4C71.6 11.7 66.5 0 66.5 0H0v1000h1000v-23.2c-19.1-9.2-38-18.8-57.2-27.4-95.4-42-201.6-77.9-302.2-41.7z"
                   />
                </svg>
@@ -95,8 +95,8 @@ const Banner = ({ speed = -125 }) => {
                   </Text>
                </div>
                <div className="group-buttons">
-                  <Button href="mailto:hello@archie.kiwi" color="orange">
-                     Booking now
+                  <Button href="mailto:alfarbetus@hotmail.com" color="orange" aria-label="Contact us">
+                     Contact Us
                   </Button>
                </div>
             </div>

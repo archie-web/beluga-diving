@@ -1,7 +1,8 @@
 /* Typography */
 @layer base {
    .heading {
-      @apply font-extrabold leading-[1.2] font-headings;
+      @apply font-extrabold leading-[1.2] font-shrikhand;
+      letter-spacing: 0.02em;
    }
    .h1,
    h1 {
@@ -23,7 +24,7 @@
 
    .h4,
    h4 {
-      @apply heading tracking-tight;
+      @apply heading;
       font-size: var(--font-size-h4);
    }
    .h5,
@@ -33,7 +34,9 @@
    p {
       font-size: var(--font-size-base);
       &.leading {
-         font-size: clamp(1.25rem, calc(1.19rem + 0.26vw), 1.5rem);
+        /* 1.125rem → 1.25rem */
+         font-size: clamp(1.125rem, calc(1.09rem + 0.13vw), 1.25rem);
+         line-height: 1.618;
       }
    }
    small,

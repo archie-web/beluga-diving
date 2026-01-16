@@ -49,8 +49,8 @@ const config: Config = {
             '6/4': '6 / 4',
          },
          fontFamily: {
-            sans: ['var(--font-noto-sans)', ...fallbackFonts],
-            headings: ['var(--font-shrikhand)', ...fallbackFonts],
+            sans: ['var(--font-inter)', ...fallbackFonts],
+            shrikhand: ['var(--font-shrikhand)', ...fallbackFonts],
             serif: ['Georgia', 'serif'],
          },
       },
