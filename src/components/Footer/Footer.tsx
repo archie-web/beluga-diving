@@ -28,16 +28,10 @@ export function Footer({ children, className }: FooterProps) {
             containerClass="absolute top-0 left-0 z-0"
          />
          <Container className="relative z-10 text-white">
-            <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4 pb-14">
-               <div className="hidden space-y-4 lg:block">
+            <div className="flex flex-col gap-12 lg:gap-16 items-center lg:items-start">
                   <Logo reversed />
-                  {/* <Text>
-                     Vavaʻu is an island group, consisting of one large island
-                     (ʻUtu Vavaʻu) and 40 smaller ones, in Tonga. It is part of
-                     Vavaʻu District, which includes several other individual
-                     islands.
-                  </Text> */}
-               </div>
+
+               <div className="flex items-center flex-col md:grid gap-12 grid-cols-2 lg:grid-cols-3 lg:gap-4 lg:w-full lg:items-start">
 
                <FooterList heading="Navigation" items={navItems} />
                <FooterList
@@ -45,18 +39,19 @@ export function Footer({ children, className }: FooterProps) {
                   items={externalLinks}
                   isExternal={true}
                />
-               <FooterList heading="To enquire or book" items={footerLinks} />
+               <FooterList heading="Enquire or book" items={footerLinks} />
+               </div>
             </div>
 
             {children}
-            <div className="pt-space justify-between pb-6 lg:flex">
-               <div>
+            <div className="pt-space pb-6 md:justify-start text-center gap-2 md:text-left flex flex-col md:flex-row md:divide-x divide-white/30 leading-none text-sm">
+               <div className="">
                   &copy;{new Date().getFullYear()}&nbsp;
                   <Link href="/" passHref>
                      {SITE_CONFIG.LEGAL_NAME}
                   </Link>
                </div>
-               <div>
+               <div className="md:pl-2">
                   Website by&nbsp;
                   <NextLink href={SITE_CONFIG.POWERED_BY.URL} isExternal>
                      {SITE_CONFIG.POWERED_BY.NAME}
@@ -70,10 +65,10 @@ export function Footer({ children, className }: FooterProps) {
 
 function FooterListItem({ item, ...props }: any) {
    return (
-      <li className="flex items-center gap-4">
-         <i className="block h-px w-6 bg-white/40" />
+      <li className="flex items-center gap-4 justify-center lg:justify-start">
+         <i className="lg:block hidden h-px w-3 bg-white/40" />
          <NextLink
-            className="block py-1 font-semibold lg:py-2 lg:text-lg"
+            className="block py-1 font-semibold lg:py-2 lg:text-lg "
             href={item.uri}
             {...props}
          >
@@ -85,8 +80,8 @@ function FooterListItem({ item, ...props }: any) {
 
 const FooterList = ({ heading, items, isExternal = false }: any) => {
    return (
-      <div className="space-y-lg">
-         <h5 className="uppercase">{heading}</h5>
+      <div className="space-y-sm">
+         <p className="font-shrikhand text-2xl">{heading}</p>
          <ul>
             {items.map((item: any, index: number) => (
                <FooterListItem

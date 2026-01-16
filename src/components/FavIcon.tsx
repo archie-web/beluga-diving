@@ -26,25 +26,24 @@ const FavIcon = () => {
             rel="mask-icon"
             href="/favicon/safari-pinned-tab.svg"
             // color={SITE_CONFIG.BRAND_COLOUR}
-            color="#212121"
+            color="#0A2342"
          />
          <link
             rel="mask-icon"
             href="favicon/safari-pinned-tab.svg"
             // color={SITE_CONFIG.BRAND_COLOUR}
-            color="#212121"
+            color="#0A2342"
          />
          <meta name="apple-mobile-web-app-title" content="Snippit" />
          <meta name="application-name" content={SITE_CONFIG.SITE_NAME} />
          <meta
             name="msapplication-TileColor"
             // color={SITE_CONFIG.BRAND_COLOUR}
-            content="#212121"
+            content="#0A2342"
          />
          <meta
             name="theme-color"
-            // color={SITE_CONFIG.BRAND_COLOUR}
-            content="#212121"
+            content="#0A2342"
          />
       </>
    );

@@ -8,6 +8,7 @@ const SITE_CONFIG = {
    SITE_DESCRIPTION:
       "Explore Vava'u, Tonga's premier destination for diving, whale watching, and swimming with whales. Immerse yourself in unforgettable underwater experiences, encountering vibrant marine life and majestic whales. Book your adventure in Vava'u today",
    SITE_URL: 'https://belugadivingvavau.com',
+   SITE_IMAGE: 'https://belugadivingvavau.com/images/logo.png',
    POWERED_BY: {
       NAME: 'ArchieWeb',
       URL: 'https://archieweb.nz',

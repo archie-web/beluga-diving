@@ -35,7 +35,7 @@ const Hamburger = forwardRef<HTMLButtonElement, HamburgerProps>(
                animate={{ width: '100%' }}
                transition={{
                   delay: 0.5 + index * 0.123,
-                //   type: 'spring',
+                  type: 'spring',
                }}
             />
          ));

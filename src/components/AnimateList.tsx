@@ -54,7 +54,7 @@ export function AnimateList({ items }: ListProps) {
                )}
 
                <div className="space-y-4 text-center lg:text-left">
-                  <h4 className="h3">{item.title}</h4>
+                  <h3 className="h3">{item.title}</h3>
                   <Text>{item.content}</Text>
                </div>
             </motion.li>
